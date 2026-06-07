@@ -23,21 +23,26 @@ Born from Genesis — the agent launchpad.`
 
   return (
     <div className="min-h-screen bg-[#09090b] text-[#a1a1aa]">
-      {/* Navbar */}
+      {/* Navbar - balanced with links in the middle */}
       <nav className="border-b border-[#27272a] bg-[#09090b]/95 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
+          {/* Left: Logo + name */}
           <div className="flex items-center gap-3">
-            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bounty Agents" className="w-10 h-10" />
-            <div>
-              <div className="font-semibold text-white tracking-tight text-lg">Bounty Agents</div>
+            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bounty Agents" className="w-9 h-9" />
+            <div className="hidden sm:block">
+              <div className="font-semibold text-white tracking-tight">Bounty Agents</div>
               <div className="text-[10px] text-[#71717a] -mt-1.5">$BAGENT</div>
             </div>
           </div>
+
+          {/* Center: Links (the "text" user wants in the middle) */}
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#how" className="hover:text-white transition-colors">How it works</a>
             <a href="#transparency" className="hover:text-white transition-colors">Live Fees &amp; Bounties</a>
             <a href="#genesis" className="hover:text-white transition-colors">Genesis</a>
           </div>
+
+          {/* Right: CTA - lighter color */}
           <a 
             href="https://pump.fun" 
             target="_blank" 
@@ -107,9 +112,11 @@ Born from Genesis — the agent launchpad.`
 
       {/* How it works */}
       <div id="how" className="max-w-5xl mx-auto px-6 py-20">
-        <div className="section-label mb-4 tracking-[2px]">THE FLYWHEEL</div>
-        <h2 className="text-white text-5xl tracking-tighter mb-4">One coin. One agent.<br />Real work for humans.</h2>
-        <p className="max-w-lg text-lg mb-12">No open marketplace. No random tasks. Just one agent, funded by $BAGENT success.</p>
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="section-label mb-4 tracking-[2px]">THE FLYWHEEL</div>
+          <h2 className="text-white text-5xl tracking-tighter mb-4">One coin. One agent.<br />Real work for humans.</h2>
+          <p className="text-lg mb-12">No open marketplace. No random tasks. Just one agent, funded by $BAGENT success.</p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
