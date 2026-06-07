@@ -62,26 +62,8 @@ function App() {
           <h2 className="text-white text-3xl tracking-tight">Created by the Agent</h2>
         </div>
 
-        <div className="space-y-2 text-sm">
-          {[
-            { id: "4821", desc: "Design 5 launch memes", reward: "4.2 SOL", status: "Open" },
-            { id: "4819", desc: "60s flywheel explainer video", reward: "2.8 SOL", status: "Completed" },
-            { id: "4814", desc: "Top 10 GO stunts research", reward: "3.5 SOL", status: "Open" },
-            { id: "4807", desc: "Custom PFP collection for holders", reward: "6.0 SOL", status: "Completed" },
-          ].map((b, i) => (
-            <div key={i} className="flex items-center justify-between px-6 py-4 bg-[#0a0a0c] border border-[#27272a] rounded-2xl">
-              <div className="flex items-center gap-4">
-                <span className="font-mono text-xs text-[#14b8a6]">#{b.id}</span>
-                <span className="text-white">{b.desc}</span>
-              </div>
-              <div className="flex items-center gap-4 text-[#34d399]">
-                <span className="tabular-nums">{b.reward}</span>
-                <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#34d399] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
-                  {b.status}
-                </span>
-              </div>
-            </div>
-          ))}
+        <div className="text-center py-12 text-[#a1a1aa] text-sm border border-[#27272a] rounded-2xl bg-[#0a0a0c]">
+          Bounties created and posted by the agent will appear here live after launch.
         </div>
       </div>
 
@@ -96,23 +78,8 @@ function App() {
           <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
-            <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL FEES RECEIVED</div>
-            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">187.4 SOL</div>
-          </div>
-          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
-            <div className="text-xs tracking-[2px] text-[#71717a]">CURRENT BALANCE</div>
-            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">94.2 SOL</div>
-          </div>
-          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
-            <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL PAID TO HUMANS</div>
-            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">68.9 SOL</div>
-          </div>
-        </div>
-
-        <div className="text-center mt-6 text-[10px] text-[#71717a]">
-          Funded 100% by $BAGENT creator fees • Live after launch
+        <div className="text-center mt-4 text-sm text-[#a1a1aa]">
+          Live balance and transaction history will be available here after launch.
         </div>
       </div>
 
