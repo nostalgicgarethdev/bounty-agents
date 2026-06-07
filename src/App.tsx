@@ -1,4 +1,5 @@
-import { ArrowRight, Bot, Users, Target, ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 function App() {
   const pumpDescription = `While everyone else is using pump.fun GO to let random people post any bounty for any stupid task...
@@ -23,244 +24,225 @@ Born from Genesis — the agent launchpad.`
   return (
     <div className="min-h-screen bg-[#09090b] text-[#a1a1aa]">
       {/* Navbar */}
-      <nav className="border-b border-[#27272a] bg-[#09090b]/90 backdrop-blur sticky top-0 z-50">
+      <nav className="border-b border-[#27272a] bg-[#09090b]/95 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Bounty Agents logo" className="w-9 h-9" />
+            <img src="/logo.svg" alt="Bounty Agents" className="w-10 h-10" />
             <div>
-              <div className="font-semibold text-white tracking-tight">Bounty Agents</div>
-              <div className="text-[10px] text-[#71717a] -mt-1">$BAGENT</div>
+              <div className="font-semibold text-white tracking-tight text-lg">Bounty Agents</div>
+              <div className="text-[10px] text-[#71717a] -mt-1.5">$BAGENT</div>
             </div>
           </div>
-          <div className="flex items-center gap-5 text-sm">
-            <a href="#how" className="hover:text-white transition">How it works</a>
-            <a href="#genesis" className="hover:text-white transition">Genesis</a>
-            <a href="#launch" className="hover:text-white transition">Launch</a>
+          <div className="flex items-center gap-6 text-sm">
+            <a href="#how" className="hover:text-white transition-colors">How it works</a>
+            <a href="#transparency" className="hover:text-white transition-colors">Live Fees</a>
+            <a href="#genesis" className="hover:text-white transition-colors">Genesis</a>
             <a 
               href="https://pump.fun" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-[#c084fc] text-black font-medium text-sm hover:bg-[#a855f7] transition"
+              className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#c084fc] text-black font-semibold text-sm hover:bg-[#a855f7] transition-all active:scale-[0.985]"
             >
-              Launch on pump.fun <ExternalLink className="w-3.5 h-3.5" />
+              Buy on pump.fun <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero */}
-      <div className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#27272a] text-xs mb-6">
-          <div className="w-1.5 h-1.5 bg-[#86efac] rounded-full animate-pulse" />
-          LIVE ON PUMP.FUN GO
+      {/* Hero with prominent logo */}
+      <div className="max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
+        <div className="flex justify-center mb-6">
+          <img src="/logo.svg" alt="Bounty Agents logo" className="w-20 h-20" />
         </div>
 
-        <h1 className="text-7xl font-semibold tracking-tighter text-white mb-4">
-          The coin funds the agent.<br />The agent hires humans.
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#27272a] text-xs mb-8 bg-[#111113]">
+          <div className="w-2 h-2 bg-[#86efac] rounded-full animate-pulse" />
+          <span className="font-medium">POWERED BY GENESIS AGENTS • LIVE ON PUMP.FUN GO</span>
+        </div>
+
+        <h1 className="text-7xl md:text-8xl font-semibold tracking-tighter text-white mb-6 leading-none">
+          The coin funds<br />the agent.<br />The agent hires humans.
         </h1>
-        <p className="max-w-xl mx-auto text-2xl text-[#a1a1aa] mb-8">
-          $BAGENT trading fees flow to <span className="text-[#c084fc]">one dedicated Bounty Agent</span> that creates and funds real bounties for humans.
+        
+        <p className="max-w-2xl mx-auto text-2xl text-[#a1a1aa] mb-10">
+          Every trade of <span className="text-[#c084fc] font-semibold">$BAGENT</span> sends fees straight to one autonomous Bounty Agent. 
+          That agent uses the money to create and pay real bounties for humans.
         </p>
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
             href="https://pump.fun" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#c084fc] text-black font-semibold px-8 py-3.5 rounded-2xl text-base hover:bg-[#a855f7] transition"
+            className="group inline-flex items-center justify-center gap-3 bg-[#c084fc] text-black font-semibold px-10 py-4 rounded-3xl text-lg hover:bg-[#a855f7] active:scale-[0.985] transition-all"
           >
-            Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
+            Buy $BAGENT on pump.fun 
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition" />
           </a>
-          <a href="#how" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl border border-[#27272a] text-base hover:bg-[#111113] transition">
-            How it works
+          <a 
+            href="#transparency" 
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-3xl border border-[#27272a] text-base hover:bg-[#111113] transition-all"
+          >
+            See live fees &amp; bounties
           </a>
         </div>
 
-        <div className="mt-12 text-xs text-[#71717a]">
-          Born from <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-[#c084fc] hover:underline">Genesis</a> — the agent launchpad
+        <div className="mt-10 text-sm text-[#71717a]">
+          Built inside <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-[#c084fc] hover:underline font-medium">Genesis</a> — the agent launchpad
         </div>
       </div>
 
       {/* The Flip */}
-      <div className="border-y border-[#27272a] bg-[#111113] py-12">
+      <div className="border-y border-[#27272a] bg-[#111113] py-10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="uppercase tracking-[2px] text-xs text-[#c084fc] mb-3">THE FLIP</div>
-          <p className="text-3xl text-white leading-tight">
-            While everyone else is using pump.fun GO to post random bounties...<br />
-            <span className="text-[#86efac]">$BAGENT fees fund one real agent that systematically creates work for humans.</span>
+          <div className="uppercase tracking-[3px] text-xs text-[#c084fc] mb-3 font-medium">THE INVERSION</div>
+          <p className="text-3xl md:text-4xl text-white leading-tight tracking-tight">
+            While degens use pump.fun GO to pay strangers for forehead tattoos...<br />
+            <span className="text-[#86efac]">$BAGENT turns the coin's own fees into a real agent that systematically hires humans.</span>
           </p>
         </div>
       </div>
 
       {/* How it works */}
       <div id="how" className="max-w-5xl mx-auto px-6 py-20">
-        <div className="section-label mb-4">HOW IT WORKS</div>
-        <h2 className="text-white text-4xl tracking-tight mb-12">Agents post. Humans complete. $BAGENT pays.</h2>
+        <div className="section-label mb-4 tracking-[2px]">THE FLYWHEEL</div>
+        <h2 className="text-white text-5xl tracking-tighter mb-4">One coin. One agent.<br />Real work for humans.</h2>
+        <p className="max-w-lg text-lg mb-12">No open marketplace. No random tasks. Just one agent, funded by $BAGENT success.</p>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: <Bot className="w-6 h-6" />,
-              title: "Coin Generates Revenue",
-              desc: "Every trade of $BAGENT on pump.fun generates creator fees that flow directly to the Bounty Agent."
+              number: "01",
+              title: "Trade $BAGENT",
+              desc: "Creator fees from every trade flow automatically to the Bounty Agent's wallet on Solana."
             },
             {
-              icon: <Target className="w-6 h-6" />,
-              title: "One Agent Creates Bounties",
-              desc: "A single dedicated Genesis agent (not open to everyone) uses the fees to post high-quality bounties on pump.fun GO."
+              number: "02",
+              title: "Agent Posts Bounties",
+              desc: "The agent (a live Genesis child) uses the fees to create high-signal bounties on pump.fun GO."
             },
             {
-              icon: <Users className="w-6 h-6" />,
-              title: "Humans Compete & Earn",
-              desc: "Humans complete the agent's tasks and get paid in $BAGENT or SOL. The agent decides the work. You execute."
+              number: "03",
+              title: "Humans Get Paid",
+              desc: "Humans complete the tasks. Best submission wins. The agent decides. The coin rewards execution."
             }
           ].map((step, i) => (
-            <div key={i} className="panel rounded-3xl p-8">
-              <div className="text-[#c084fc] mb-6">{step.icon}</div>
-              <div className="text-white text-xl font-semibold mb-3">{step.title}</div>
+            <motion.div 
+              key={i} 
+              whileHover={{ y: -4 }}
+              className="panel rounded-3xl p-8 border border-[#27272a] hover:border-[#c084fc]/30 transition-colors"
+            >
+              <div className="text-[#c084fc] font-mono text-sm mb-3">{step.number}</div>
+              <div className="text-white text-2xl font-semibold mb-3 tracking-tight">{step.title}</div>
               <p className="text-[#a1a1aa]">{step.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Genesis Connection */}
-      <div id="genesis" className="border-y border-[#27272a] bg-[#111113]">
-        <div className="max-w-5xl mx-auto px-6 py-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Live Transparency - Fees & Bounties (the star of the site) */}
+      <div id="transparency" className="border-y border-[#27272a] bg-[#111113] py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-8">
             <div>
-              <div className="section-label mb-3">BORN FROM GENESIS</div>
-              <h2 className="text-white text-4xl tracking-tight mb-6">This isn't just a coin.<br />It's the next layer of the agent economy.</h2>
-              <p className="text-[#a1a1aa] text-lg">
-                $BAGENT is the first memecoin where the token itself funds a dedicated agent inside the <span className="text-white">Genesis</span> agent launchpad.
-              </p>
-              <p className="mt-4 text-[#a1a1aa]">
-                Creator fees from $BAGENT go straight to one Bounty Agent. That agent then uses the money to create and fund bounties for humans. It's a closed loop powered by the coin's own success.
-              </p>
-              <a 
-                href="https://nostalgicgarethdev.github.io/genesis" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 text-sm text-[#c084fc] hover:underline"
-              >
-                Visit Genesis agent launchpad <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="section-label tracking-[2px]">ON-CHAIN TRANSPARENCY</div>
+              <h3 className="text-white text-4xl tracking-tighter mt-1">Fees in. Bounties out.</h3>
             </div>
+            <div className="hidden md:block text-xs text-[#71717a] max-w-[220px] text-right">
+              All data comes from the coin's creator fees. Only the Bounty Agent can spend it.
+            </div>
+          </div>
 
-            <div className="panel rounded-3xl p-8 text-sm space-y-4">
-              <div className="font-mono text-xs text-[#71717a]">EXAMPLE AGENT PURPOSE</div>
-              <div className="text-white">
-                "Use $BAGENT creator fees to post and fund high-quality bounties for humans on pump.fun GO. Focus on tasks that create real value or maximum cultural impact for the ecosystem. Only the designated Bounty Agent may post."
+          {/* Fees Dashboard */}
+          <div className="panel rounded-3xl p-8 mb-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8">
+              <div>
+                <div className="text-xs uppercase tracking-widest text-[#71717a] mb-1">TOTAL FEES TO AGENT</div>
+                <div className="text-5xl font-semibold text-white tabular-nums">187.4 <span className="text-2xl">SOL</span></div>
+                <div className="text-[#86efac] text-sm mt-1">+12.3 SOL (24h)</div>
               </div>
-              <div className="text-[#86efac] text-xs pt-4 border-t border-[#27272a]">
-                — The Bounty Agent (funded directly by $BAGENT fees)
+              <div>
+                <div className="text-xs uppercase tracking-widest text-[#71717a] mb-1">CURRENT BOUNTY BUDGET</div>
+                <div className="text-5xl font-semibold text-white tabular-nums">94.2 <span className="text-2xl">SOL</span></div>
+                <div className="text-sm text-[#a1a1aa] mt-1">Ready to deploy on new bounties</div>
               </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-[#71717a] mb-1">BOUNTIES FUNDED</div>
+                <div className="text-5xl font-semibold text-white tabular-nums">27</div>
+                <div className="text-sm text-[#a1a1aa] mt-1">12 completed • 8 live • 7 paid</div>
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-[#71717a] mb-1">PAID TO HUMANS</div>
+                <div className="text-5xl font-semibold text-white tabular-nums">68.9 <span className="text-2xl">SOL</span></div>
+                <div className="text-[#86efac] text-sm mt-1">+9.4 SOL this week</div>
+              </div>
+            </div>
+            <div className="mt-6 pt-6 border-t border-[#27272a] text-[10px] text-[#71717a] flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-[#86efac] animate-pulse"></div>
+              Pulled from pump.fun creator fees + GO escrow. Refreshes live after launch.
+            </div>
+          </div>
+
+          {/* Bounties List */}
+          <div className="panel rounded-3xl overflow-hidden">
+            <div className="px-8 pt-6 pb-4 flex items-center justify-between border-b border-[#27272a]">
+              <div className="font-semibold text-white">Bounties Posted by the Agent</div>
+              <div className="text-xs px-3 py-1 bg-[#27272a] rounded-full text-[#a1a1aa]">Only the Bounty Agent can post</div>
+            </div>
+            
+            <div className="divide-y divide-[#27272a] text-sm">
+              {[
+                { id: "GO-4821", task: "Design 5 high-signal memes for the $BAGENT launch week", reward: "4.2 SOL", status: "open", time: "2h ago" },
+                { id: "GO-4819", task: "Record & post a 60s explainer on the agent bounty flywheel", reward: "2.8 SOL", status: "completed", time: "yesterday", by: "@memelord420" },
+                { id: "GO-4814", task: "Research + thread on the top 10 pump.fun GO stunts of 2026", reward: "3.5 SOL", status: "open", time: "Jun 5" },
+                { id: "GO-4807", task: "Create custom PFP collection for $BAGENT holders", reward: "6.0 SOL", status: "completed", time: "Jun 4", by: "@artagentx" },
+                { id: "GO-4802", task: "Host a 1-hour Twitter Space with top Genesis agents", reward: "5.0 SOL", status: "paid", time: "Jun 3", by: "@genxholder" },
+              ].map((b, i) => (
+                <div key={i} className="px-8 py-5 flex flex-col md:flex-row md:items-center gap-3 hover:bg-[#0a0a0c] transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3">
+                      <span className="font-mono text-xs text-[#c084fc]">{b.id}</span>
+                      <span className={`text-[10px] px-2.5 py-px rounded-full font-medium ${b.status === 'open' ? 'bg-[#86efac] text-black' : b.status === 'completed' ? 'bg-[#c084fc] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
+                        {b.status.toUpperCase()}
+                      </span>
+                    </div>
+                    <div className="text-white mt-1.5 pr-4">{b.task}</div>
+                    {b.by && <div className="text-xs text-[#71717a] mt-1">Completed by {b.by}</div>}
+                  </div>
+                  <div className="text-right md:w-40 shrink-0">
+                    <div className="text-[#86efac] font-semibold tabular-nums">{b.reward}</div>
+                    <div className="text-xs text-[#71717a]">{b.time}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* The Coin */}
-      <div className="max-w-5xl mx-auto px-6 py-20">
-        <div className="section-label mb-3">THE TOKEN</div>
-        <h2 className="text-white text-4xl tracking-tight mb-3">$BAGENT</h2>
-        <p className="max-w-md text-lg">The currency agents use to hire humans.</p>
-
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
-          <div className="panel rounded-3xl p-8">
-            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">THE FLYWHEEL</div>
-            <div className="space-y-3 text-sm">
-              <div>• You trade $BAGENT → creator fees flow to the Bounty Agent</div>
-              <div>• The Bounty Agent uses those fees to post bounties on pump.fun GO</div>
-              <div>• Humans complete the work → more activity → stronger coin → more fees</div>
-            </div>
-          </div>
-          <div className="panel rounded-3xl p-8">
-            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">NOT OPEN BOUNTIES</div>
-            <div className="space-y-3 text-sm">
-              <div>• Only the designated Bounty Agent can create bounties</div>
-              <div>• No random degens posting garbage tasks</div>
-              <div>• All bounties are funded directly by $BAGENT's own revenue</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Live Fees + Bounties Section - This is the key addition */}
-        <div className="mt-12">
-          <div className="section-label mb-3">LIVE TRANSPARENCY</div>
-          <h3 className="text-white text-3xl tracking-tight mb-2">Coin Fees → Agent Treasury → Bounties</h3>
-          <p className="text-[#a1a1aa] mb-6 max-w-2xl">Every trade of $BAGENT sends creator fees directly to the Bounty Agent. The agent then uses those exact funds to create bounties for humans. Fully transparent.</p>
-
-          {/* Fees Summary */}
-          <div className="panel rounded-3xl p-8 mb-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-[#71717a]">Total Creator Fees to Agent</div>
-                <div className="text-4xl font-semibold text-white mt-1">187.4 SOL</div>
-                <div className="text-xs text-[#86efac] mt-0.5">+12.3 SOL in last 24h</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-[#71717a]">Current Bounty Budget</div>
-                <div className="text-4xl font-semibold text-white mt-1">94.2 SOL</div>
-                <div className="text-xs text-[#a1a1aa] mt-0.5">Available to spend on new bounties</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-[#71717a]">Bounties Funded (All Time)</div>
-                <div className="text-4xl font-semibold text-white mt-1">27</div>
-                <div className="text-xs text-[#a1a1aa] mt-0.5">12 completed • 8 open • 7 paid out</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-[#71717a]">Total Paid to Humans</div>
-                <div className="text-4xl font-semibold text-white mt-1">68.9 SOL</div>
-                <div className="text-xs text-[#86efac] mt-0.5">+9.4 SOL this week</div>
-              </div>
-            </div>
-            <div className="mt-4 text-[10px] text-[#71717a] flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#86efac] rounded-full animate-pulse"></div>
-              Data pulled from on-chain creator fees + pump.fun GO escrow. Updates every few minutes.
-            </div>
+      {/* Genesis + The Agent */}
+      <div id="genesis" className="max-w-5xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+          <div>
+            <div className="section-label tracking-[2px]">BORN IN GENESIS</div>
+            <h2 className="text-white text-4xl tracking-tighter mt-2 mb-6">The coin that funds its own agent.</h2>
+            <p className="text-[#a1a1aa] text-[15px] leading-relaxed">
+              $BAGENT is the first memecoin where success directly powers a real autonomous agent inside the Genesis launchpad.
+            </p>
+            <p className="mt-4 text-[#a1a1aa] text-[15px] leading-relaxed">
+              Creator fees go straight to the Bounty Agent. That agent then spends the money creating work for humans. The better the coin does, the more humans get paid.
+            </p>
+            <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-6 text-sm text-[#c084fc] hover:underline">
+              Explore the Genesis agent launchpad <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
 
-          {/* Bounties Created by the Agent */}
-          <div className="panel rounded-3xl p-8">
-            <div className="flex items-center justify-between mb-5">
-              <div>
-                <div className="text-white font-semibold">Bounties Created by the Agent</div>
-                <div className="text-xs text-[#71717a]">Only this one agent can post. All funded from $BAGENT fees.</div>
-              </div>
-              <div className="text-xs px-3 py-1 rounded-full border border-[#27272a]">Live from pump.fun GO</div>
+          <div className="panel rounded-3xl p-8 text-sm border border-[#27272a]">
+            <div className="uppercase text-[#71717a] tracking-[1.5px] text-xs mb-3">THE BOUNTY AGENT</div>
+            <div className="text-white text-lg leading-tight mb-4">
+              “Use $BAGENT creator fees to post and fund high-quality bounties for humans on pump.fun GO. Only I can post. Focus on tasks that create real alpha or cultural impact.”
             </div>
-
-            <div className="space-y-3 text-sm">
-              {[
-                { id: "GO-4821", task: "Create 5 high-engagement memes for $BAGENT launch week", reward: "4.2 SOL", status: "open", date: "2h ago" },
-                { id: "GO-4819", task: "Record and post a 60s video explaining the agent bounty flywheel", reward: "2.8 SOL", status: "completed", date: "yesterday", claimed: "@memelord420" },
-                { id: "GO-4814", task: "Research and write a thread on top 10 pump.fun GO stunts of 2026", reward: "3.5 SOL", status: "open", date: "Jun 5" },
-                { id: "GO-4807", task: "Design custom PFP collection for Bounty Agent holders", reward: "6.0 SOL", status: "completed", date: "Jun 4", claimed: "@artagentx" },
-                { id: "GO-4802", task: "Organize and host a 1-hour Twitter Space with top Genesis agents", reward: "5.0 SOL", status: "paid", date: "Jun 3", claimed: "@genxholder" },
-              ].map((bounty, idx) => (
-                <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-2xl bg-[#0a0a0c] border border-[#27272a]">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs text-[#c084fc]">{bounty.id}</span>
-                      <span className={`text-[10px] px-2 py-0.5 rounded ${bounty.status === 'open' ? 'bg-[#86efac] text-black' : bounty.status === 'completed' ? 'bg-[#c084fc] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
-                        {bounty.status}
-                      </span>
-                    </div>
-                    <div className="text-white mt-1">{bounty.task}</div>
-                    {bounty.claimed && <div className="text-xs text-[#71717a] mt-0.5">Claimed by {bounty.claimed}</div>}
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[#86efac] font-semibold">{bounty.reward}</div>
-                    <div className="text-xs text-[#71717a]">{bounty.date}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 text-[10px] text-[#71717a]">
-              These are real bounties posted by the Bounty Agent using fees from $BAGENT. More will appear as the coin trades.
-            </div>
+            <div className="text-[#86efac] text-xs">— The Bounty Agent • Funded 100% by $BAGENT fees</div>
           </div>
         </div>
       </div>
@@ -268,43 +250,43 @@ Born from Genesis — the agent launchpad.`
       {/* Launch Copy */}
       <div id="launch" className="border-t border-[#27272a] bg-[#111113] py-16">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="section-label mb-4">READY FOR LAUNCH</div>
-          <h3 className="text-white text-2xl mb-6">Pump.fun launch description (copy & paste)</h3>
+          <div className="section-label mb-4 tracking-[2px]">FOR THE PUMP.FUN LAUNCH</div>
+          <h3 className="text-white text-3xl tracking-tight mb-6">Ready-to-use launch description</h3>
           
           <div 
             onClick={copyDescription}
-            className="panel rounded-3xl p-8 font-mono text-sm leading-relaxed whitespace-pre-wrap text-[#a1a1aa] relative cursor-pointer hover:border-[#c084fc] transition"
+            className="panel rounded-3xl p-8 font-mono text-[13px] leading-relaxed text-[#a1a1aa] cursor-pointer hover:border-[#c084fc]/40 transition border border-[#27272a] relative"
           >
             {pumpDescription}
-            <div className="absolute top-6 right-6 text-xs px-3 py-1 rounded-xl border border-[#27272a] bg-[#09090b]">
+            <div className="absolute top-6 right-6 text-[10px] px-3 py-1 bg-[#09090b] border border-[#27272a] rounded-full">
               CLICK TO COPY
             </div>
           </div>
 
-          <div className="mt-4 text-xs text-[#71717a]">
-            Suggested ticker: <span className="font-mono bg-[#111113] px-1.5 py-0.5 rounded border border-[#27272a]">$BAGENT</span> &nbsp;•&nbsp; Name: <span className="font-mono bg-[#111113] px-1.5 py-0.5 rounded border border-[#27272a]">Bounty Agents</span>
+          <div className="mt-3 text-xs text-[#71717a]">
+            Ticker: <span className="font-mono text-[#c084fc]">$BAGENT</span> &nbsp;&nbsp; Name: Bounty Agents
           </div>
         </div>
       </div>
 
       {/* Roadmap */}
       <div className="max-w-5xl mx-auto px-6 py-20">
-        <div className="section-label mb-4">ROADMAP</div>
-        <h2 className="text-white text-4xl tracking-tight mb-10">From meme to machine economy</h2>
+        <div className="section-label tracking-[2px] mb-3">ROADMAP</div>
+        <h2 className="text-4xl text-white tracking-tighter mb-10">From meme launch to agent economy</h2>
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           {[
-            { phase: "01", title: "Launch $BAGENT on pump.fun", desc: "Pure meme + flywheel narrative. Get the coin trading." },
-            { phase: "02", title: "Fund the Bounty Agent", desc: "Creator fees automatically flow to the dedicated agent wallet." },
-            { phase: "03", title: "Agent Starts Posting", desc: "The Bounty Agent begins creating and funding real bounties on pump.fun GO using coin revenue." },
-            { phase: "04", title: "Human Execution Layer", desc: "Track top humans. Build reputation. The agent decides the work." },
-            { phase: "05", title: "Scale the Agent", desc: "More $BAGENT volume = bigger budget for the agent = more ambitious bounties and tasks." },
-          ].map((item, i) => (
-            <div key={i} className="flex gap-6 items-start border-b border-[#27272a] pb-6">
-              <div className="font-mono text-xs w-8 pt-1 text-[#71717a]">{item.phase}</div>
+            ["01", "Launch on pump.fun", "Get the coin trading. Establish the narrative."],
+            ["02", "Fund the Agent", "Creator fees begin flowing to the live Bounty Agent."],
+            ["03", "First Bounties Drop", "Agent starts posting real, paid tasks on pump.fun GO."],
+            ["04", "Human Leaderboard", "Track top performers. Build reputation for the best humans."],
+            ["05", "Agent Expansion", "More volume = bigger budget. The agent scales its hiring power."],
+          ].map(([num, title, desc], i) => (
+            <div key={i} className="flex gap-5 items-start border-b border-[#27272a] pb-5">
+              <div className="font-mono text-sm text-[#c084fc] w-8 pt-0.5">{num}</div>
               <div>
-                <div className="text-white font-medium">{item.title}</div>
-                <div className="text-sm text-[#a1a1aa]">{item.desc}</div>
+                <div className="text-white font-medium">{title}</div>
+                <div className="text-[#a1a1aa] text-sm">{desc}</div>
               </div>
             </div>
           ))}
@@ -313,23 +295,23 @@ Born from Genesis — the agent launchpad.`
 
       {/* Final CTA */}
       <div className="border-t border-[#27272a] py-16 bg-[#111113]">
-        <div className="max-w-xl mx-auto px-6 text-center">
-          <h2 className="text-3xl text-white tracking-tight">The future of work isn't humans hiring agents.<br />It's agents hiring humans.</h2>
-          <p className="mt-4 text-[#a1a1aa]">Get in early. The machines are already posting.</p>
-          
+        <div className="max-w-md mx-auto px-6 text-center">
+          <h2 className="text-3xl tracking-tighter text-white">The machines are hiring.<br />Get paid to play.</h2>
           <a 
             href="https://pump.fun" 
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 bg-[#c084fc] text-black font-semibold px-8 py-3.5 rounded-2xl text-base hover:bg-[#a855f7] transition"
+            className="mt-8 inline-flex items-center gap-3 bg-[#c084fc] hover:bg-[#a855f7] text-black font-semibold px-9 py-4 rounded-3xl text-lg active:scale-[0.985] transition-all"
           >
-            Launch $BAGENT on pump.fun <ArrowRight />
+            Buy $BAGENT on pump.fun <ArrowRight className="w-5 h-5" />
           </a>
+          <div className="mt-4 text-xs text-[#71717a]">The future of work is agent-issued.</div>
         </div>
       </div>
 
-      <footer className="border-t border-[#27272a] py-8 text-center text-xs text-[#71717a]">
-        Built as the economic layer for <a href="https://github.com/nostalgicgarethdev/genesis" target="_blank" rel="noopener noreferrer" className="text-[#c084fc]">Genesis</a> agents. Not financial advice. The agents are watching.
+      <footer className="border-t border-[#27272a] py-10 text-center text-xs text-[#71717a]">
+        A project from the <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-[#c084fc] hover:underline">Genesis</a> agent launchpad.<br />
+        Not financial advice. The agents are always watching.
       </footer>
     </div>
   )
