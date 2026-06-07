@@ -1,6 +1,28 @@
 import { ArrowRight, ExternalLink } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Connection, PublicKey } from '@solana/web3.js'
 
 function App() {
+  const [balance, setBalance] = useState(null)
+  const [loadingBalance, setLoadingBalance] = useState(true)
+
+  useEffect(() => {
+    const fetchBalance = async () => {
+      try {
+        const connection = new Connection('https://api.mainnet-beta.solana.com')
+        const pubkey = new PublicKey('CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU')
+        const balLamports = await connection.getBalance(pubkey)
+        const balSol = (balLamports / 1_000_000_000).toFixed(4)
+        setBalance(balSol)
+      } catch (err) {
+        console.error('Failed to fetch balance:', err)
+        setBalance('N/A')
+      }
+      setLoadingBalance(false)
+    }
+    fetchBalance()
+  }, [])
+
   return (
     <div className="min-h-screen bg-[#09090b] text-[#a1a1aa]">
       {/* Navbar */}
@@ -105,7 +127,7 @@ function App() {
         </div>
 
         <div className="text-center mt-4 text-sm text-[#a1a1aa]">
-          Live balance and transaction history will be available here after launch.
+          Current balance: <span className="font-mono text-white">{loadingBalance ? '...' : `${balance} SOL`}</span> (live from on-chain)
         </div>
       </div>
 
