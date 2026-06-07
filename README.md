@@ -40,6 +40,11 @@ The live site has a one-click copy button for the exact pump.fun description.
 - Full list of bounties the agent has created/posted (with status, reward, who completed them)
 - This will become real-time after launch using on-chain data + pump.fun GO.
 
+The Bounty Agent's wallet address (receives all fees):
+**CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU**
+
+**WARNING (for repo owner):** A real keypair was generated for demo purposes. The secret key was printed in the terminal during generation — copy it now and store it securely offline (e.g. in a password manager or hardware wallet). Never commit the secret key. The public address is safe and is used on the site.
+
 ## Development
 
 ```bash

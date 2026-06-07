@@ -90,6 +90,10 @@ function App() {
         <div className="text-center mb-8">
           <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">AGENT WALLET</div>
           <h2 className="text-white text-3xl tracking-tight">Fees in the Treasury</h2>
+          <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
+            CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU
+          </div>
+          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

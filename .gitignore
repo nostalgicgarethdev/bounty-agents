@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Agent wallet secrets (never commit these)
+*.secret
+*.key
+agent-secret.txt
+.env.agent
+**/*secret*
