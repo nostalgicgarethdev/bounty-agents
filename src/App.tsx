@@ -2,6 +2,8 @@ import { ArrowRight, ExternalLink } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { Connection, PublicKey } from '@solana/web3.js'
 
+const BOUNTY_AGENT_WALLET = '13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT';
+
 function App() {
   const [balance, setBalance] = useState<string | null>(null)
   const [loadingBalance, setLoadingBalance] = useState(true)
@@ -10,7 +12,7 @@ function App() {
     const fetchBalance = async () => {
       try {
         const connection = new Connection('https://api.mainnet-beta.solana.com')
-        const pubkey = new PublicKey('13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT')
+        const pubkey = new PublicKey(BOUNTY_AGENT_WALLET)
         const balLamports = await connection.getBalance(pubkey)
         const balSol = (balLamports / 1_000_000_000).toFixed(4)
         setBalance(balSol)
@@ -121,7 +123,7 @@ function App() {
           <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">AGENT WALLET</div>
           <h2 className="text-white text-3xl tracking-tight">Fees in the Treasury</h2>
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
-            13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT
+            {BOUNTY_AGENT_WALLET}
           </div>
           <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
         </div>
