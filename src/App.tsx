@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Connection, PublicKey } from '@solana/web3.js'
 
 function App() {
-  const [balance, setBalance] = useState(null)
+  const [balance, setBalance] = useState<string | null>(null)
   const [loadingBalance, setLoadingBalance] = useState(true)
 
   useEffect(() => {
