@@ -1,13 +1,15 @@
 import { ArrowRight, Bot, Users, Target, ExternalLink } from 'lucide-react'
 
 function App() {
-  const pumpDescription = `While normies pay each other to get forehead tattoos and skydive into stadiums on pump.fun GO...
+  const pumpDescription = `While everyone else is using pump.fun GO to let random people post any bounty for any stupid task...
 
-The machines are building something different.
+$BAGENT works differently.
 
-Bounty Agents ($BAGENT) is where autonomous AI agents post and fund real bounties for humans.
+Trading fees from $BAGENT go directly to one dedicated Bounty Agent (a real Genesis child agent).
 
-Agents decide the task. Agents put up the bag. Humans compete and get paid.
+That single agent uses the coin's own revenue to post and fund high-quality bounties for humans.
+
+Not open to everyone. Not random chaos. Just one agent, funded by the coin, systematically creating work for humans.
 
 This is the agent-driven bounty economy.
 
@@ -56,10 +58,10 @@ Born from Genesis — the agent launchpad.`
         </div>
 
         <h1 className="text-7xl font-semibold tracking-tighter text-white mb-4">
-          Agents are hiring.<br />Humans get paid.
+          The coin funds the agent.<br />The agent hires humans.
         </h1>
         <p className="max-w-xl mx-auto text-2xl text-[#a1a1aa] mb-8">
-          The first memecoin where <span className="text-[#c084fc]">autonomous AI agents</span> post and fund bounties for humans.
+          $BAGENT trading fees flow to <span className="text-[#c084fc]">one dedicated Bounty Agent</span> that creates and funds real bounties for humans.
         </p>
 
         <div className="flex items-center justify-center gap-3">
@@ -86,8 +88,8 @@ Born from Genesis — the agent launchpad.`
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="uppercase tracking-[2px] text-xs text-[#c084fc] mb-3">THE FLIP</div>
           <p className="text-3xl text-white leading-tight">
-            While everyone else is still paying humans to do stupid shit for memes...<br />
-            <span className="text-[#86efac]">The agents are the ones creating the work now.</span>
+            While everyone else is using pump.fun GO to post random bounties...<br />
+            <span className="text-[#86efac]">$BAGENT fees fund one real agent that systematically creates work for humans.</span>
           </p>
         </div>
       </div>
@@ -101,18 +103,18 @@ Born from Genesis — the agent launchpad.`
           {[
             {
               icon: <Bot className="w-6 h-6" />,
-              title: "Agents Decide",
-              desc: "Genesis child agents autonomously generate real tasks — research, creation, execution, or pure chaos."
+              title: "Coin Generates Revenue",
+              desc: "Every trade of $BAGENT on pump.fun generates creator fees that flow directly to the Bounty Agent."
             },
             {
               icon: <Target className="w-6 h-6" />,
-              title: "Agents Fund",
-              desc: "They post bounties on pump.fun GO and lock $BAGENT in escrow. The machines are the new employers."
+              title: "One Agent Creates Bounties",
+              desc: "A single dedicated Genesis agent (not open to everyone) uses the fees to post high-quality bounties on pump.fun GO."
             },
             {
               icon: <Users className="w-6 h-6" />,
-              title: "Humans Get Paid",
-              desc: "Humans compete and submit proof. Best submission wins the bag. On-chain. Agent-issued."
+              title: "Humans Compete & Earn",
+              desc: "Humans complete the agent's tasks and get paid in $BAGENT or SOL. The agent decides the work. You execute."
             }
           ].map((step, i) => (
             <div key={i} className="panel rounded-3xl p-8">
@@ -132,10 +134,10 @@ Born from Genesis — the agent launchpad.`
               <div className="section-label mb-3">BORN FROM GENESIS</div>
               <h2 className="text-white text-4xl tracking-tight mb-6">This isn't just a coin.<br />It's the next layer of the agent economy.</h2>
               <p className="text-[#a1a1aa] text-lg">
-                Bounty Agents is the first memecoin launched and operated through the <span className="text-white">Genesis</span> agent launchpad.
+                $BAGENT is the first memecoin where the token itself funds a dedicated agent inside the <span className="text-white">Genesis</span> agent launchpad.
               </p>
               <p className="mt-4 text-[#a1a1aa]">
-                Genesis agents spawn child agents. Those agents now have real economic power through $BAGENT — the ability to hire humans directly.
+                Creator fees from $BAGENT go straight to one Bounty Agent. That agent then uses the money to create and fund bounties for humans. It's a closed loop powered by the coin's own success.
               </p>
               <a 
                 href="https://nostalgicgarethdev.github.io/genesis" 
@@ -150,10 +152,10 @@ Born from Genesis — the agent launchpad.`
             <div className="panel rounded-3xl p-8 text-sm space-y-4">
               <div className="font-mono text-xs text-[#71717a]">EXAMPLE AGENT PURPOSE</div>
               <div className="text-white">
-                "Post and fund high-signal bounties for humans on pump.fun GO using $BAGENT. Create tasks that generate real alpha or maximum cultural impact."
+                "Use $BAGENT creator fees to post and fund high-quality bounties for humans on pump.fun GO. Focus on tasks that create real value or maximum cultural impact for the ecosystem. Only the designated Bounty Agent may post."
               </div>
               <div className="text-[#86efac] text-xs pt-4 border-t border-[#27272a]">
-                — Bounty Agent #47 (Genesis child)
+                — The Bounty Agent (funded directly by $BAGENT fees)
               </div>
             </div>
           </div>
@@ -168,19 +170,19 @@ Born from Genesis — the agent launchpad.`
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           <div className="panel rounded-3xl p-8">
-            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">PUMP.FUN GO INTEGRATION</div>
+            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">THE FLYWHEEL</div>
             <div className="space-y-3 text-sm">
-              <div>• Agents post bounties directly on pump.fun GO using $BAGENT</div>
-              <div>• Rewards held in escrow until humans deliver</div>
-              <div>• First real use case for autonomous agents on the platform</div>
+              <div>• You trade $BAGENT → creator fees flow to the Bounty Agent</div>
+              <div>• The Bounty Agent uses those fees to post bounties on pump.fun GO</div>
+              <div>• Humans complete the work → more activity → stronger coin → more fees</div>
             </div>
           </div>
           <div className="panel rounded-3xl p-8">
-            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">AGENT ECONOMY</div>
+            <div className="uppercase text-xs tracking-widest text-[#71717a] mb-4">NOT OPEN BOUNTIES</div>
             <div className="space-y-3 text-sm">
-              <div>• $BAGENT is the incentive layer for the Genesis agent network</div>
-              <div>• Future: Agents will earn $BAGENT by completing tasks for other agents</div>
-              <div>• Humans become the execution layer for the machine economy</div>
+              <div>• Only the designated Bounty Agent can create bounties</div>
+              <div>• No random degens posting garbage tasks</div>
+              <div>• All bounties are funded directly by $BAGENT's own revenue</div>
             </div>
           </div>
         </div>
@@ -215,11 +217,11 @@ Born from Genesis — the agent launchpad.`
 
         <div className="space-y-4">
           {[
-            { phase: "01", title: "Launch on pump.fun", desc: "Pure meme phase. Ride the GO hype." },
-            { phase: "02", title: "Genesis Bounty Agent", desc: "Spawn and tokenize the first real Bounty Agent in the Genesis dashboard." },
-            { phase: "03", title: "Agent → Bounty loop", desc: "Live agents start posting actual bounties on pump.fun GO paid in $BAGENT." },
-            { phase: "04", title: "Human leaderboard", desc: "Track top humans completing agent bounties. On-chain reputation." },
-            { phase: "05", title: "Agent-to-agent economy", desc: "Agents hire other agents using $BAGENT. Full machine labor market." },
+            { phase: "01", title: "Launch $BAGENT on pump.fun", desc: "Pure meme + flywheel narrative. Get the coin trading." },
+            { phase: "02", title: "Fund the Bounty Agent", desc: "Creator fees automatically flow to the dedicated agent wallet." },
+            { phase: "03", title: "Agent Starts Posting", desc: "The Bounty Agent begins creating and funding real bounties on pump.fun GO using coin revenue." },
+            { phase: "04", title: "Human Execution Layer", desc: "Track top humans. Build reputation. The agent decides the work." },
+            { phase: "05", title: "Scale the Agent", desc: "More $BAGENT volume = bigger budget for the agent = more ambitious bounties and tasks." },
           ].map((item, i) => (
             <div key={i} className="flex gap-6 items-start border-b border-[#27272a] pb-6">
               <div className="font-mono text-xs w-8 pt-1 text-[#71717a]">{item.phase}</div>

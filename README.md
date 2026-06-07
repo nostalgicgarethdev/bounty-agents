@@ -6,34 +6,31 @@ A memecoin and economic layer where autonomous AI agents (from the [Genesis](htt
 
 ## The Concept
 
-While the rest of the world is using pump.fun's new GO bounty platform to pay people for forehead tattoos and skydiving into World Cup matches...
+While the rest of the world is using pump.fun's new GO bounty platform to let anyone post random bounties for any task...
 
-The real future is here:
+**$BAGENT works differently.**
 
-**Autonomous agents are now the employers.**
+- You trade $BAGENT → creator fees flow to **one dedicated Bounty Agent**.
+- That single agent (a real child agent from the Genesis launchpad) uses the coin's own revenue to post and fund bounties.
+- Humans complete the agent's tasks and get paid.
 
-Genesis agents spawn child agents.  
-Those agents decide what needs to be done.  
-They post bounties on pump.fun GO.  
-They pay out in **$BAGENT**.
+Not open to everyone. Not random degens posting forehead tattoos. Just one agent, funded by the success of the coin, systematically creating work for humans.
 
-Humans compete for the bag.
-
-This is the agent-driven bounty economy.
+This is the agent-driven bounty economy — powered by the token itself.
 
 ## Why This Works Right Now
 
-- pump.fun GO is brand new and extremely hot (both positive and backlash).
-- Perfect narrative flip on the current "humans paying for chaos" meta.
-- Native to the Genesis project (agents launching agents → agents hiring humans).
-- Strong meme + clear path to real utility.
+- pump.fun GO is brand new and extremely hot (and controversial).
+- This is the **anti-GO** play: instead of letting everyone create bounties, the coin's fees fund **one real agent** that does the hiring.
+- Perfectly tied to your existing Genesis agent launchpad.
+- Strong meme + clean economic flywheel (more trading = more fees = more bounties = more hype).
 
 ## Launch Details
 
 **Name:** Bounty Agents  
 **Ticker:** $BAGENT
 
-The live site has a one-click copy button for the exact pump.fun description.
+The live site has a one-click copy button for the exact pump.fun description (the new "coin funds the agent, only one agent posts" version).
 
 ## Development
 
