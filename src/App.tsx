@@ -15,18 +15,17 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm">
-            <a href="#how" className="hover:text-white transition-colors">How it works</a>
-            <a href="#live" className="hover:text-white transition-colors">Live</a>
-            <a href="#genesis" className="hover:text-white transition-colors">Genesis</a>
+            <a href="#bounties" className="hover:text-white transition-colors">Bounties</a>
+            <a href="#wallet" className="hover:text-white transition-colors">Wallet</a>
           </div>
 
           <a 
-            href="https://pump.fun" 
+            href="https://pump.fun/A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#5eead4] text-[#134e4b] font-medium text-sm hover:bg-white transition-all"
           >
-            Buy on pump.fun <ExternalLink className="w-3.5 h-3.5" />
+            Buy $BAGENT on pump.fun <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
       </nav>
@@ -42,11 +41,11 @@ function App() {
         </h1>
 
         <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-10">
-          Funded entirely by $BAGENT creator fees. This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
+          Funded entirely by $BAGENT creator fees (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump). This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
         </p>
 
         <a 
-          href="https://pump.fun" 
+          href="https://pump.fun/A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
@@ -75,7 +74,7 @@ function App() {
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
             CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU
           </div>
-          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
+          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees • Token: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump)</div>
         </div>
 
         <div className="text-center mt-4 text-sm text-[#a1a1aa]">
@@ -86,7 +85,7 @@ function App() {
       {/* Simple CTA */}
       <div className="border-t border-[#27272a] py-12 bg-[#111113] text-center">
         <a 
-          href="https://pump.fun" 
+          href="https://pump.fun/A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"

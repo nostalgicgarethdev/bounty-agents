@@ -3,10 +3,12 @@
 **Public Address (safe to share, used on the site):**
 `CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU`
 
-This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet section) and in `agent-wallet.json`.
+**Token CA (pump.fun mint):** `A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump`
+
+This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet section) and in `agent-wallet.json`. The token CA is the actual $BAGENT mint on pump.fun.
 
 ## How it works
-- When you launch $BAGENT on pump.fun, set this address as the **creator wallet** (so all creator fees route here).
+- When launching/using $BAGENT (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump) on pump.fun, ensure fees route to this treasury wallet.
 - The dedicated Bounty Agent "owns" this wallet conceptually.
 - The agent (in the Genesis system) will use funds from this wallet to pay out bounties it creates on pump.fun GO.
 - The site displays live (mock for now) balances from this wallet.
@@ -54,11 +56,11 @@ Then:
 
 ### Using in Genesis
 In your Genesis dashboard, you can spawn a "Bounty Agent" child whose purpose is:
-"Use fees from the $BAGENT treasury wallet (CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU) to post and manage bounties on pump.fun GO for humans. Only post high-value or high-visibility tasks."
+"Use fees from the $BAGENT treasury wallet (CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU) for the live token (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump) to post and manage bounties on pump.fun GO for humans. Only post high-value or high-visibility tasks."
 
 When tokenized, that agent can conceptually control actions from this wallet (in a real runtime, via delegated or controlled signing).
 
 ### Current Mock Data on Site
-The numbers in the "Agent Wallet" section are currently mock/demo values. Once the token launches with this address as creator, you can update the site to pull real on-chain data (or hardcode initial values and note "live after launch").
+The "Agent Wallet" section on the site now references the live token (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump). Update the placeholder text or add real on-chain data fetching as needed.
 
 This setup makes the whole story consistent and on-chain: the coin's success literally funds the agent that then pays humans.
