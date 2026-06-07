@@ -40,9 +40,36 @@ function App() {
           The Bounty Agent
         </h1>
 
-        <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-10">
-          Funded entirely by $BAGENT creator fees (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump). This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
+        <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-6">
+          Funded entirely by $BAGENT creator fees. This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
         </p>
+
+        {/* Prominent Token CA badge */}
+        <div className="max-w-md mx-auto mb-8">
+          <div className="inline-flex items-center gap-2 bg-[#111113] border border-[#27272a] rounded-full px-4 py-1.5 text-sm">
+            <span className="text-[#71717a]">Token CA</span>
+            <code 
+              onClick={(e) => {
+                navigator.clipboard.writeText('A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump');
+                const el = e.currentTarget;
+                const orig = el.textContent;
+                el.textContent = 'Copied!';
+                setTimeout(() => { if (el) el.textContent = orig; }, 1500);
+              }}
+              className="font-mono text-[#14b8a6] cursor-pointer hover:underline select-all break-all"
+            >
+              A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump
+            </code>
+            <a 
+              href="https://pump.fun/A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#14b8a6] hover:text-white"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
 
         <a 
           href="https://pump.fun/A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump" 
@@ -74,7 +101,7 @@ function App() {
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
             CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU
           </div>
-          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees • Token: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump)</div>
+          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
         </div>
 
         <div className="text-center mt-4 text-sm text-[#a1a1aa]">
