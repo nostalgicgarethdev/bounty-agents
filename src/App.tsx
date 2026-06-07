@@ -2,7 +2,7 @@ import { ArrowRight, ExternalLink } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { Connection, PublicKey } from '@solana/web3.js'
 
-const BOUNTY_AGENT_WALLET = '13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT';
+const BOUNTY_AGENT_WALLET = 'Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe';
 
 function App() {
   const [balance, setBalance] = useState<string | null>(null)
