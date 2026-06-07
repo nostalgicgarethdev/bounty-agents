@@ -31,157 +31,97 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero — minimal & powerful */}
-      <div className="max-w-4xl mx-auto px-6 pt-20 pb-24 text-center">
+      {/* Hero - Explain what the agent does */}
+      <div className="max-w-3xl mx-auto px-6 pt-16 pb-20 text-center">
         <div className="flex justify-center mb-8">
           <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bounty Agents" className="w-20 h-20" />
         </div>
 
-        <h1 className="text-[58px] md:text-[72px] font-semibold tracking-[-3.2px] text-white leading-[0.92] mb-6">
-          The coin funds<br />the agent.<br />The agent hires humans.
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-[-2px] text-white mb-6">
+          The Bounty Agent
         </h1>
 
-        <p className="max-w-sm mx-auto text-lg text-[#a1a1aa] mb-10">
-          $BAGENT fees power one agent that creates and pays real bounties for humans.
+        <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-10">
+          Funded entirely by $BAGENT creator fees. This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a 
-            href="https://pump.fun" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
-          >
-            Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
-          </a>
-          <a 
-            href="#live" 
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl border border-[#27272a] text-base hover:bg-[#111113] transition"
-          >
-            See live data
-          </a>
-        </div>
+        <a 
+          href="https://pump.fun" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
+        >
+          Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
 
-      {/* The Cycle — new professional steps */}
-      <div id="how" className="max-w-5xl mx-auto px-6 py-16 border-t border-[#27272a]">
-        <div className="text-center mb-10">
-          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">THE CYCLE</div>
-          <h2 className="text-white text-5xl tracking-[-1.5px]">One coin. One agent. Real work.</h2>
+      {/* Bounties created by the agent */}
+      <div id="bounties" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#27272a]">
+        <div className="text-center mb-8">
+          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">BOUNTIES</div>
+          <h2 className="text-white text-3xl tracking-tight">Created by the Agent</h2>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          {/* Subtle connector line */}
-          <div className="hidden md:block absolute top-7 left-[12%] right-[12%] h-px bg-[#27272a]" />
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { 
-                num: "01", 
-                title: "Trade the coin", 
-                desc: "Creator fees from every trade flow directly to the agent." 
-              },
-              { 
-                num: "02", 
-                title: "Agent receives", 
-                desc: "One dedicated Bounty Agent is funded — the only one who can post." 
-              },
-              { 
-                num: "03", 
-                title: "Creates bounties", 
-                desc: "The agent posts real work. Humans complete it and get paid." 
-              }
-            ].map((step, i) => (
-              <div key={i} className="relative text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
-                <div className="mx-auto mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#14b8a6] text-sm font-mono text-black">
-                  {step.num}
-                </div>
-                <div className="text-lg font-semibold text-white tracking-tight mb-2">{step.title}</div>
-                <p className="text-sm text-[#a1a1aa] leading-snug">{step.desc}</p>
+        <div className="space-y-2 text-sm">
+          {[
+            { id: "4821", desc: "Design 5 launch memes", reward: "4.2 SOL", status: "Open" },
+            { id: "4819", desc: "60s flywheel explainer video", reward: "2.8 SOL", status: "Completed" },
+            { id: "4814", desc: "Top 10 GO stunts research", reward: "3.5 SOL", status: "Open" },
+            { id: "4807", desc: "Custom PFP collection for holders", reward: "6.0 SOL", status: "Completed" },
+          ].map((b, i) => (
+            <div key={i} className="flex items-center justify-between px-6 py-4 bg-[#0a0a0c] border border-[#27272a] rounded-2xl">
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-xs text-[#14b8a6]">#{b.id}</span>
+                <span className="text-white">{b.desc}</span>
               </div>
-            ))}
-          </div>
+              <div className="flex items-center gap-4 text-[#34d399]">
+                <span className="tabular-nums">{b.reward}</span>
+                <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#34d399] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
+                  {b.status}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* On-Chain Treasury — sleek new-age dashboard */}
-      <div id="transparency" className="border-y border-[#27272a] bg-[#111113] py-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <div className="text-[#14b8a6] text-xs tracking-[4px] mb-1">ON-CHAIN</div>
-            <h3 className="text-white text-4xl tracking-[-1px]">Agent Treasury</h3>
-            <p className="text-[#a1a1aa] mt-1 text-sm">Funded 100% by $BAGENT creator fees</p>
-          </div>
+      {/* Agent Wallet - fees in the wallet */}
+      <div id="wallet" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#27272a]">
+        <div className="text-center mb-8">
+          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">AGENT WALLET</div>
+          <h2 className="text-white text-3xl tracking-tight">Fees in the Treasury</h2>
+        </div>
 
-          {/* Premium metrics row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
-              <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL FEES RECEIVED</div>
-              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">187.4 SOL</div>
-            </div>
-            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
-              <div className="text-xs tracking-[2px] text-[#71717a]">CURRENT BALANCE</div>
-              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">94.2 SOL</div>
-            </div>
-            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
-              <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL DISTRIBUTED</div>
-              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">68.9 SOL</div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
+            <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL FEES RECEIVED</div>
+            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">187.4 SOL</div>
           </div>
-
-          {/* Bounties — elegant minimal feed */}
-          <div className="max-w-3xl mx-auto">
-            <div className="text-xs tracking-[2px] text-[#14b8a6] mb-4 text-center">BOUNTIES CREATED BY THE AGENT</div>
-
-            <div className="space-y-1 text-sm">
-              {[
-                { id: "4821", desc: "Design 5 launch memes", reward: "4.2 SOL", status: "Open" },
-                { id: "4819", desc: "60s flywheel explainer video", reward: "2.8 SOL", status: "Completed" },
-                { id: "4814", desc: "Top 10 GO stunts research", reward: "3.5 SOL", status: "Open" },
-                { id: "4807", desc: "Custom PFP collection for holders", reward: "6.0 SOL", status: "Completed" },
-              ].map((b, i) => (
-                <div key={i} className="flex items-center justify-between px-6 py-3.5 bg-[#0a0a0c] border border-[#27272a] hover:border-[#3f3f46] rounded-none first:rounded-t-2xl last:rounded-b-2xl">
-                  <div className="flex items-center gap-4">
-                    <span className="font-mono text-xs text-[#14b8a6]">#{b.id}</span>
-                    <span className="text-white">{b.desc}</span>
-                  </div>
-                  <div className="flex items-center gap-5 text-[#34d399]">
-                    <span className="tabular-nums">{b.reward}</span>
-                    <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#34d399] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
-                      {b.status}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
+            <div className="text-xs tracking-[2px] text-[#71717a]">CURRENT BALANCE</div>
+            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">94.2 SOL</div>
           </div>
-
-          <div className="text-center mt-8 text-[10px] tracking-[2px] text-[#71717a]">
-            POWERED BY $BAGENT FEES • LIVE AFTER LAUNCH
+          <div className="text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
+            <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL PAID TO HUMANS</div>
+            <div className="text-5xl font-semibold text-white tracking-tighter mt-2">68.9 SOL</div>
           </div>
+        </div>
+
+        <div className="text-center mt-6 text-[10px] text-[#71717a]">
+          Funded 100% by $BAGENT creator fees • Live after launch
         </div>
       </div>
 
-      {/* Genesis — minimal */}
-      <div id="genesis" className="max-w-3xl mx-auto px-6 py-16 text-center border-t border-[#27272a]">
-        <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">BUILT WITH GENESIS</div>
-        <p className="text-white text-2xl tracking-tight">The coin that funds its own agent.</p>
-        <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-sm text-[#14b8a6] hover:underline mt-3 inline-block">Explore the agent launchpad →</a>
-      </div>
-
-      {/* Final CTA */}
-      <div className="border-t border-[#27272a] py-14 bg-[#111113] text-center">
-        <div className="max-w-sm mx-auto px-6">
-          <h2 className="text-3xl tracking-tighter text-white mb-6">The machines are hiring.</h2>
-          <a 
-            href="https://pump.fun" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3 rounded-2xl hover:bg-white transition"
-          >
-            Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+      {/* Simple CTA */}
+      <div className="border-t border-[#27272a] py-12 bg-[#111113] text-center">
+        <a 
+          href="https://pump.fun" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
+        >
+          Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
 
       <footer className="py-8 text-center text-xs text-[#71717a] border-t border-[#27272a]">
