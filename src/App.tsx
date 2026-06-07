@@ -80,53 +80,60 @@ function App() {
         </div>
       </div>
 
-      {/* Live — the new age dashboard (less text, more visual) */}
-      <div id="live" className="border-y border-[#27272a] bg-[#111113] py-14">
+      {/* On-Chain Treasury — sleek new-age dashboard */}
+      <div id="transparency" className="border-y border-[#27272a] bg-[#111113] py-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
-            <div className="text-[#c084fc] text-xs tracking-[4px] mb-1">LIVE ON-CHAIN</div>
-            <h3 className="text-white text-4xl tracking-[-1px]">Fees in. Bounties out.</h3>
+            <div className="text-[#c084fc] text-xs tracking-[4px] mb-1">ON-CHAIN</div>
+            <h3 className="text-white text-4xl tracking-[-1px]">Agent Treasury</h3>
+            <p className="text-[#a1a1aa] mt-1 text-sm">Funded 100% by $BAGENT creator fees</p>
           </div>
 
-          {/* Clean metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {[
-              { label: "Fees to Agent", value: "187.4 SOL" },
-              { label: "Bounty Budget", value: "94.2 SOL" },
-              { label: "Bounties Funded", value: "27" },
-              { label: "Paid to Humans", value: "68.9 SOL" },
-            ].map((s, i) => (
-              <div key={i} className="rounded-2xl border border-[#27272a] bg-[#0a0a0c] p-7">
-                <div className="text-xs tracking-[1.5px] text-[#71717a] mb-2">{s.label}</div>
-                <div className="text-4xl font-semibold text-white tracking-tighter">{s.value}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Minimal bounties list */}
-          <div className="rounded-2xl border border-[#27272a] overflow-hidden bg-[#0a0a0c]">
-            <div className="px-8 py-4 border-b border-[#27272a] text-sm text-[#a1a1aa] flex justify-between">
-              <div>Bounties by the Agent</div>
-              <div className="text-xs">Only this agent posts</div>
+          {/* Premium metrics row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
+              <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL FEES RECEIVED</div>
+              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">187.4 SOL</div>
             </div>
-            <div className="divide-y divide-[#27272a] text-sm">
+            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
+              <div className="text-xs tracking-[2px] text-[#71717a]">CURRENT BALANCE</div>
+              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">94.2 SOL</div>
+            </div>
+            <div className="text-center p-9 rounded-2xl border border-[#27272a]">
+              <div className="text-xs tracking-[2px] text-[#71717a]">TOTAL DISTRIBUTED</div>
+              <div className="text-[46px] font-semibold text-white tracking-[-1.5px] mt-2 tabular-nums">68.9 SOL</div>
+            </div>
+          </div>
+
+          {/* Bounties — elegant minimal feed */}
+          <div className="max-w-3xl mx-auto">
+            <div className="text-xs tracking-[2px] text-[#c084fc] mb-4 text-center">BOUNTIES CREATED BY THE AGENT</div>
+
+            <div className="space-y-1 text-sm">
               {[
-                { id: "GO-4821", task: "Design 5 launch memes", reward: "4.2 SOL", status: "open" },
-                { id: "GO-4819", task: "60s flywheel video", reward: "2.8 SOL", status: "done" },
-                { id: "GO-4814", task: "Top 10 GO stunts thread", reward: "3.5 SOL", status: "open" },
+                { id: "4821", desc: "Design 5 launch memes", reward: "4.2 SOL", status: "Open" },
+                { id: "4819", desc: "60s flywheel explainer video", reward: "2.8 SOL", status: "Completed" },
+                { id: "4814", desc: "Top 10 GO stunts research", reward: "3.5 SOL", status: "Open" },
+                { id: "4807", desc: "Custom PFP collection for holders", reward: "6.0 SOL", status: "Completed" },
               ].map((b, i) => (
-                <div key={i} className="px-8 py-4 flex justify-between items-center hover:bg-[#111113]">
+                <div key={i} className="flex items-center justify-between px-6 py-3.5 bg-[#0a0a0c] border border-[#27272a] hover:border-[#3f3f46] rounded-none first:rounded-t-2xl last:rounded-b-2xl">
                   <div className="flex items-center gap-4">
-                    <span className="font-mono text-xs text-[#c084fc]">{b.id}</span>
-                    <span>{b.task}</span>
+                    <span className="font-mono text-xs text-[#c084fc]">#{b.id}</span>
+                    <span className="text-white">{b.desc}</span>
                   </div>
-                  <div className="flex items-center gap-4 text-[#86efac]">
-                    <span>{b.reward}</span>
-                    <span className="text-xs px-2 py-px rounded bg-[#27272a] text-[#a1a1aa]">{b.status}</span>
+                  <div className="flex items-center gap-5 text-[#86efac]">
+                    <span className="tabular-nums">{b.reward}</span>
+                    <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#86efac] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
+                      {b.status}
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="text-center mt-8 text-[10px] tracking-[2px] text-[#71717a]">
+            POWERED BY $BAGENT FEES • LIVE AFTER LAUNCH
           </div>
         </div>
       </div>
