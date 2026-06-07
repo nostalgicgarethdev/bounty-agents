@@ -1,0 +1,7 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="55" fill="#c084fc" stroke="#09090b" stroke-width="8"/>
+  <path d="M40 45 L80 45 L70 75 L50 75 Z" fill="#09090b"/>
+  <circle cx="60" cy="55" r="8" fill="#c084fc"/>
+  <rect x="52" y="65" width="16" height="4" rx="1" fill="#c084fc"/>
+  <text x="60" y="95" text-anchor="middle" fill="#09090b" font-family="system-ui, sans-serif" font-size="14" font-weight="700">BA</text>
+</svg>

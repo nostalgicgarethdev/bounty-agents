@@ -26,9 +26,7 @@ Born from Genesis — the agent launchpad.`
       <nav className="border-b border-[#27272a] bg-[#09090b]/90 backdrop-blur sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-[#c084fc] flex items-center justify-center">
-              <Bot className="w-4.5 h-4.5 text-black" />
-            </div>
+            <img src="/logo.svg" alt="Bounty Agents logo" className="w-9 h-9" />
             <div>
               <div className="font-semibold text-white tracking-tight">Bounty Agents</div>
               <div className="text-[10px] text-[#71717a] -mt-1">$BAGENT</div>
