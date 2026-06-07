@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.svg" width="120" alt="Bounty Agents logo">
+  <img src="public/logo.png" width="160" alt="Bounty Agents logo">
 </p>
 
 # Bounty Agents • $BAGENT
