@@ -1,25 +1,25 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background circle -->
-  <circle cx="60" cy="60" r="55" fill="#c084fc"/>
+  <circle cx="60" cy="60" r="55" fill="#14b8a6"/>
   <circle cx="60" cy="60" r="48" fill="#09090b"/>
   
   <!-- Robot head -->
-  <rect x="35" y="35" width="50" height="40" rx="6" fill="#c084fc"/>
+  <rect x="35" y="35" width="50" height="40" rx="6" fill="#14b8a6"/>
   
   <!-- Antenna -->
-  <circle cx="60" cy="28" r="5" fill="#c084fc"/>
-  <line x1="60" y1="33" x2="60" y2="38" stroke="#c084fc" stroke-width="3"/>
+  <circle cx="60" cy="28" r="5" fill="#14b8a6"/>
+  <line x1="60" y1="33" x2="60" y2="38" stroke="#14b8a6" stroke-width="3"/>
   
   <!-- Eyes -->
   <circle cx="45" cy="48" r="6" fill="#09090b"/>
   <circle cx="75" cy="48" r="6" fill="#09090b"/>
-  <circle cx="45" cy="48" r="3" fill="#c084fc"/>
-  <circle cx="75" cy="48" r="3" fill="#c084fc"/>
+  <circle cx="45" cy="48" r="3" fill="#14b8a6"/>
+  <circle cx="75" cy="48" r="3" fill="#14b8a6"/>
   
   <!-- Bounty coin in mouth -->
-  <circle cx="60" cy="62" r="10" fill="#86efac" stroke="#09090b" stroke-width="2"/>
+  <circle cx="60" cy="62" r="10" fill="#34d399" stroke="#09090b" stroke-width="2"/>
   <text x="60" y="66" text-anchor="middle" fill="#09090b" font-family="system-ui, sans-serif" font-size="10" font-weight="bold">$</text>
   
   <!-- Label -->
-  <text x="60" y="95" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="16" font-weight="700">BA</text>
+  <text x="60" y="95" text-anchor="middle" fill="#14b8a6" font-family="system-ui, sans-serif" font-size="16" font-weight="700">BA</text>
 </svg>

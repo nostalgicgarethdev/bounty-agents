@@ -24,7 +24,7 @@ function App() {
             href="https://pump.fun" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#e0d1ff] text-[#312e81] font-medium text-sm hover:bg-white transition-all"
+            className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#5eead4] text-[#134e4b] font-medium text-sm hover:bg-white transition-all"
           >
             Buy on pump.fun <ExternalLink className="w-3.5 h-3.5" />
           </a>
@@ -50,7 +50,7 @@ function App() {
             href="https://pump.fun" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#e0d1ff] text-[#312e81] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
+            className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
           >
             Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
           </a>
@@ -63,20 +63,44 @@ function App() {
         </div>
       </div>
 
-      {/* How it works — ultra minimal */}
-      <div id="how" className="max-w-5xl mx-auto px-6 py-14 border-t border-[#27272a]">
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {[
-            { num: "01", title: "Trade", desc: "Fees go to the agent" },
-            { num: "02", title: "Agent posts", desc: "Bounties on pump.fun GO" },
-            { num: "03", title: "Humans deliver", desc: "Get paid" },
-          ].map((item, i) => (
-            <div key={i} className="text-center py-8">
-              <div className="text-[#c084fc] font-mono text-xs mb-3">{item.num}</div>
-              <div className="text-white text-xl font-medium tracking-tight mb-1">{item.title}</div>
-              <p className="text-sm text-[#a1a1aa]">{item.desc}</p>
-            </div>
-          ))}
+      {/* The Cycle — new professional steps */}
+      <div id="how" className="max-w-5xl mx-auto px-6 py-16 border-t border-[#27272a]">
+        <div className="text-center mb-10">
+          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">THE CYCLE</div>
+          <h2 className="text-white text-5xl tracking-[-1.5px]">One coin. One agent. Real work.</h2>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto">
+          {/* Subtle connector line */}
+          <div className="hidden md:block absolute top-7 left-[12%] right-[12%] h-px bg-[#27272a]" />
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { 
+                num: "01", 
+                title: "Trade the coin", 
+                desc: "Creator fees from every trade flow directly to the agent." 
+              },
+              { 
+                num: "02", 
+                title: "Agent receives", 
+                desc: "One dedicated Bounty Agent is funded — the only one who can post." 
+              },
+              { 
+                num: "03", 
+                title: "Creates bounties", 
+                desc: "The agent posts real work. Humans complete it and get paid." 
+              }
+            ].map((step, i) => (
+              <div key={i} className="relative text-center p-8 rounded-2xl border border-[#27272a] bg-[#0a0a0c]">
+                <div className="mx-auto mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#14b8a6] text-sm font-mono text-black">
+                  {step.num}
+                </div>
+                <div className="text-lg font-semibold text-white tracking-tight mb-2">{step.title}</div>
+                <p className="text-sm text-[#a1a1aa] leading-snug">{step.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -84,7 +108,7 @@ function App() {
       <div id="transparency" className="border-y border-[#27272a] bg-[#111113] py-16">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
-            <div className="text-[#c084fc] text-xs tracking-[4px] mb-1">ON-CHAIN</div>
+            <div className="text-[#14b8a6] text-xs tracking-[4px] mb-1">ON-CHAIN</div>
             <h3 className="text-white text-4xl tracking-[-1px]">Agent Treasury</h3>
             <p className="text-[#a1a1aa] mt-1 text-sm">Funded 100% by $BAGENT creator fees</p>
           </div>
@@ -107,7 +131,7 @@ function App() {
 
           {/* Bounties — elegant minimal feed */}
           <div className="max-w-3xl mx-auto">
-            <div className="text-xs tracking-[2px] text-[#c084fc] mb-4 text-center">BOUNTIES CREATED BY THE AGENT</div>
+            <div className="text-xs tracking-[2px] text-[#14b8a6] mb-4 text-center">BOUNTIES CREATED BY THE AGENT</div>
 
             <div className="space-y-1 text-sm">
               {[
@@ -118,12 +142,12 @@ function App() {
               ].map((b, i) => (
                 <div key={i} className="flex items-center justify-between px-6 py-3.5 bg-[#0a0a0c] border border-[#27272a] hover:border-[#3f3f46] rounded-none first:rounded-t-2xl last:rounded-b-2xl">
                   <div className="flex items-center gap-4">
-                    <span className="font-mono text-xs text-[#c084fc]">#{b.id}</span>
+                    <span className="font-mono text-xs text-[#14b8a6]">#{b.id}</span>
                     <span className="text-white">{b.desc}</span>
                   </div>
-                  <div className="flex items-center gap-5 text-[#86efac]">
+                  <div className="flex items-center gap-5 text-[#34d399]">
                     <span className="tabular-nums">{b.reward}</span>
-                    <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#86efac] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
+                    <span className={`text-xs px-3 py-px rounded-full ${b.status === 'Open' ? 'bg-[#34d399] text-black' : 'bg-[#27272a] text-[#a1a1aa]'}`}>
                       {b.status}
                     </span>
                   </div>
@@ -140,9 +164,9 @@ function App() {
 
       {/* Genesis — minimal */}
       <div id="genesis" className="max-w-3xl mx-auto px-6 py-16 text-center border-t border-[#27272a]">
-        <div className="text-[#c084fc] text-xs tracking-[3px] mb-2">BUILT WITH GENESIS</div>
+        <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">BUILT WITH GENESIS</div>
         <p className="text-white text-2xl tracking-tight">The coin that funds its own agent.</p>
-        <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-sm text-[#c084fc] hover:underline mt-3 inline-block">Explore the agent launchpad →</a>
+        <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-sm text-[#14b8a6] hover:underline mt-3 inline-block">Explore the agent launchpad →</a>
       </div>
 
       {/* Final CTA */}
@@ -153,7 +177,7 @@ function App() {
             href="https://pump.fun" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#e0d1ff] text-[#312e81] font-medium px-8 py-3 rounded-2xl hover:bg-white transition"
+            className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3 rounded-2xl hover:bg-white transition"
           >
             Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
           </a>
@@ -161,7 +185,7 @@ function App() {
       </div>
 
       <footer className="py-8 text-center text-xs text-[#71717a] border-t border-[#27272a]">
-        From the <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-[#c084fc]">Genesis</a> agent launchpad.
+        From the <a href="https://nostalgicgarethdev.github.io/genesis" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6]">Genesis</a> agent launchpad.
       </footer>
     </div>
   )
