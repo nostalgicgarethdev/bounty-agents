@@ -50,7 +50,7 @@ The live site has a one-click copy button for the exact pump.fun description (if
 - This will become real-time after launch using on-chain data + pump.fun GO.
 
 The Bounty Agent's wallet address (receives all fees):
-**CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU**
+**13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT**
 
 The live site now fetches and displays the current SOL balance of this wallet on-chain.
 

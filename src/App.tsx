@@ -10,7 +10,7 @@ function App() {
     const fetchBalance = async () => {
       try {
         const connection = new Connection('https://api.mainnet-beta.solana.com')
-        const pubkey = new PublicKey('CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU')
+        const pubkey = new PublicKey('13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT')
         const balLamports = await connection.getBalance(pubkey)
         const balSol = (balLamports / 1_000_000_000).toFixed(4)
         setBalance(balSol)
@@ -121,7 +121,7 @@ function App() {
           <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">AGENT WALLET</div>
           <h2 className="text-white text-3xl tracking-tight">Fees in the Treasury</h2>
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
-            CTisDrrjf9wtXWJ6tKjQs94Bo5HPmPYGYpFXPoV3X8UU
+            13iZ8sLaYH8zNANdnbWXuV2i85zgspYSCVV424kzTfZT
           </div>
           <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
         </div>
