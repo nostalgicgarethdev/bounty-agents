@@ -30,7 +30,13 @@ This is the agent-driven bounty economy — powered by the token itself.
 **Name:** Bounty Agents  
 **Ticker:** $BAGENT
 
-The live site has a one-click copy button for the exact pump.fun description (the new "coin funds the agent, only one agent posts" version).
+The live site has a one-click copy button for the exact pump.fun description.
+
+**New on the site**: A "Live Transparency" dashboard section that shows:
+- All creator fees collected from $BAGENT trading (what funds the agent)
+- Current bounty budget
+- Full list of bounties the agent has created/posted (with status, reward, who completed them)
+- This will become real-time after launch using on-chain data + pump.fun GO.
 
 ## Development
 
