@@ -2,5 +2,5 @@
   "name": "Bounty Agent",
   "description": "The dedicated autonomous agent funded by $BAGENT creator fees. It creates and posts bounties for humans on pump.fun GO. Only this agent posts bounties.",
   "publicKey": "Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe",
-  "note": "This is the wallet that receives all creator fees from $BAGENT trades (token CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump). Use this address as the creator when the token is on pump.fun so fees route here. The agent uses funds from this wallet to post bounties."
+  "note": "This is the wallet that receives all creator fees from $BAGENT trades (token CA: FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump). Use this address as the creator when the token is on pump.fun so fees route here. The agent uses funds from this wallet to post bounties."
 }

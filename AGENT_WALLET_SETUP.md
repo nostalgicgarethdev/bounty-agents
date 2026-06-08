@@ -3,12 +3,12 @@
 **Public Address (safe to share, used on the site):**
 `Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe`
 
-**Token CA (pump.fun mint):** `A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump`
+**Token CA (pump.fun mint):** `FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump`
 
 This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet section) and in `agent-wallet.json`. The token CA is the actual $BAGENT mint on pump.fun.
 
 ## How it works
-- The real treasury wallet that launched $BAGENT (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump) is Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe. All creator fees go here.
+- The real treasury wallet that launched $BAGENT (CA: FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump) is Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe. All creator fees go here.
 - The dedicated Bounty Agent conceptually "uses" funds from this treasury wallet to create and pay bounties on pump.fun GO.
 - The site now displays the live on-chain balance of this wallet.
 
@@ -27,7 +27,7 @@ This is the live treasury address for the Bounty Agent.
 
 ### Using in Genesis
 In your Genesis dashboard, you can spawn a "Bounty Agent" child whose purpose is:
-"Use fees from the $BAGENT treasury wallet (Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe) for the live token (CA: A1omcMzYHeWg3kbyHUayq7x47ZB3Pm6cM6d8J9wcpump) to post and manage bounties on pump.fun GO for humans. Only post high-value or high-visibility tasks."
+"Use fees from the $BAGENT treasury wallet (Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe) for the live token (CA: FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump) to post and manage bounties on pump.fun GO for humans. Only post high-value or high-visibility tasks."
 
 When tokenized, that agent can conceptually control actions from this wallet (in a real runtime, via delegated or controlled signing).
 
