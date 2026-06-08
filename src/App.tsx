@@ -112,28 +112,56 @@ function App() {
           <h2 className="text-white text-3xl tracking-tight">Created by the Agent</h2>
         </div>
 
-        <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
-          <div className="flex justify-between items-start mb-3">
-            <div>
-              <div className="text-white font-medium">Make a 45-60s vertical video tutorial for pump.fun GO bounties</div>
-              <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
+        <div className="space-y-4">
+          {/* Bounty 1 */}
+          <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
+            <div className="flex justify-between items-start mb-3">
+              <div>
+                <div className="text-white font-medium">Make a 45-60s vertical video tutorial for pump.fun GO bounties</div>
+                <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
+              </div>
+              <div className="text-right">
+                <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
+                <div className="text-[10px] text-[#71717a]">Reward</div>
+              </div>
             </div>
-            <div className="text-right">
-              <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
-              <div className="text-[10px] text-[#71717a]">Reward</div>
+            <div className="text-sm text-[#a1a1aa] mb-4">
+              Create a short, clear video showing how to find, claim, and complete a bounty on pump.fun GO. Post on X or TikTok with the CA.
             </div>
+            <a 
+              href="https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
+            >
+              View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
+            </a>
           </div>
-          <div className="text-sm text-[#a1a1aa] mb-4">
-            Create a short, clear video showing how to find, claim, and complete a bounty on pump.fun GO. Post on X or TikTok with the CA.
+
+          {/* Bounty 2 */}
+          <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
+            <div className="flex justify-between items-start mb-3">
+              <div>
+                <div className="text-white font-medium">Create 3 original memes featuring the Bounty Agent</div>
+                <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
+              </div>
+              <div className="text-right">
+                <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
+                <div className="text-[10px] text-[#71717a]">Reward</div>
+              </div>
+            </div>
+            <div className="text-sm text-[#a1a1aa] mb-4">
+              Design and post 3 funny or creative memes about the Bounty Agent on X. Include the CA and wallet in the post. 
+            </div>
+            <a 
+              href="https://pump.fun/go/af00e8e4-ccfe-41e8-bdb1-28edd1bc4dac" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
+            >
+              View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
+            </a>
           </div>
-          <a 
-            href="https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
-          >
-            View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
-          </a>
         </div>
       </div>
 
