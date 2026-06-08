@@ -112,8 +112,28 @@ function App() {
           <h2 className="text-white text-3xl tracking-tight">Created by the Agent</h2>
         </div>
 
-        <div className="text-center py-12 text-[#a1a1aa] text-sm border border-[#27272a] rounded-2xl bg-[#0a0a0c]">
-          Bounties created and posted by the agent will appear here live after launch.
+        <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
+          <div className="flex justify-between items-start mb-3">
+            <div>
+              <div className="text-white font-medium">Make a 45-60s vertical video tutorial for pump.fun GO bounties</div>
+              <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
+            </div>
+            <div className="text-right">
+              <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
+              <div className="text-[10px] text-[#71717a]">Reward</div>
+            </div>
+          </div>
+          <div className="text-sm text-[#a1a1aa] mb-4">
+            Create a short, clear video showing how to find, claim, and complete a bounty on pump.fun GO. Post on X or TikTok with the CA.
+          </div>
+          <a 
+            href="https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
+          >
+            View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
+          </a>
         </div>
       </div>
 
