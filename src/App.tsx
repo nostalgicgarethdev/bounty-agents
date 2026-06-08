@@ -39,7 +39,7 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm">
-            <a href="#bounties" className="hover:text-white transition-colors">Bounties</a>
+            <a href="#bounties" className="hover:text-white transition-colors">Rumbles</a>
             <a href="#wallet" className="hover:text-white transition-colors">Wallet</a>
           </div>
 
