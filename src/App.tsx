@@ -156,6 +156,38 @@ function App() {
                 {String(Math.floor(secondsLeft / 60)).padStart(2, '0')}:{String(secondsLeft % 60).padStart(2, '0')}
               </div>
             </div>
+
+            {/* Latest Rumble Result from holders simulation */}
+            <div className="border-t border-[#27272a] pt-3 mt-3">
+              <div className="text-xs text-[#71717a] mb-1">LATEST RUMBLE RESULT (Demo)</div>
+              <div className="text-sm text-[#a1a1aa] mb-1">23 holders entered • Random elimination rounds</div>
+              <div className="text-[10px] font-mono text-[#a1a1aa] bg-[#111113] p-1.5 rounded mb-2">
+                Round 18: Eliminated CpYj2C... | 5 left<br/>
+                Round 19: Eliminated 6iGdRn... | 4 left<br/>
+                Round 20: Eliminated 6sx5Rf... | 3 left<br/>
+                Round 21: Eliminated 6sq3n1... | 2 left<br/>
+                Round 22: Eliminated FGGJcJ... | 1 left
+              </div>
+              <div>
+                <div className="text-xs text-[#71717a] mb-0.5">WINNING WALLET (Last Man Standing)</div>
+                <div className="font-mono text-xs text-white break-all bg-[#111113] p-1.5 rounded flex items-center justify-between">
+                  <span>2VZS3LUGZnT1bt3mBfkZdw9tR5TsUF8MkGvfaRhDLuvK</span>
+                  <button 
+                    onClick={(e) => {
+                      navigator.clipboard.writeText('2VZS3LUGZnT1bt3mBfkZdw9tR5TsUF8MkGvfaRhDLuvK');
+                      const btn = e.currentTarget;
+                      const orig = btn.textContent;
+                      btn.textContent = 'Copied!';
+                      setTimeout(() => { if (btn) btn.textContent = orig; }, 1500);
+                    }}
+                    className="ml-2 text-[9px] px-1.5 py-0.5 bg-[#14b8a6] text-[#09090b] rounded hover:bg-white"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div className="text-[10px] text-[#14b8a6] mt-1">Send the current treasury balance (pot above) from the agent wallet to this address.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
