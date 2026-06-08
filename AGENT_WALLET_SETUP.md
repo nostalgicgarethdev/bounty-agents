@@ -5,15 +5,15 @@
 
 **Token CA (pump.fun mint):** TBD
 
-This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet section) and in `agent-wallet.json`. The token CA is the actual $BAGENT mint on pump.fun.
+This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet section) and in `agent-wallet.json`. The token CA is the actual $RUMBLE mint on pump.fun.
 
 ## How it works
-- The real treasury wallet that launched $BAGENT is B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF. All creator fees go here. (CA TBD)
+- The real treasury wallet that launched $RUMBLE is B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF. All creator fees go here. (CA TBD)
 - The dedicated Rumble Agent conceptually "uses" funds from this treasury wallet to create and pay bounties on pump.fun GO.
 - The site now displays the live on-chain balance of this wallet.
 
 ## IMPORTANT - Secret Key
-This is the **real wallet** used to launch the $BAGENT token on pump.fun. 
+This is the **real wallet** used to launch the $RUMBLE token on pump.fun. 
 
 You control the secret key (the one you used to create the coin on pump.fun). 
 
@@ -27,7 +27,7 @@ This is the live treasury address for the Rumble Agent.
 
 ### Using in Genesis
 In your Genesis dashboard, you can spawn a "Rumble Agent" child whose purpose is:
-"Use fees from the $BAGENT treasury wallet (B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF) for the live token (CA TBD) to run Royal Rumbles on pump.fun for humans. The last wallet standing claims the period's fees."
+"Use fees from the $RUMBLE treasury wallet (B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF) for the live token (CA TBD) to run Royal Rumbles on pump.fun for humans. The last wallet standing claims the period's fees."
 
 When tokenized, that agent can conceptually control actions from this wallet (in a real runtime, via delegated or controlled signing).
 

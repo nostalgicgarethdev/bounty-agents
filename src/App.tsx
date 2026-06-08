@@ -34,7 +34,7 @@ function App() {
             <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Rumble Agents" className="w-9 h-9" />
             <div className="hidden sm:block">
               <div className="font-semibold text-white tracking-tight">Rumble Agents</div>
-              <div className="text-[10px] text-[#71717a] -mt-1.5">$BAGENT</div>
+              <div className="text-[10px] text-[#71717a] -mt-1.5">$RUMBLE</div>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ function App() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#5eead4] text-[#134e4b] font-medium text-sm hover:bg-white transition-all"
           >
-            Buy $BAGENT on pump.fun <ExternalLink className="w-3.5 h-3.5" />
+            Buy $RUMBLE on pump.fun <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
       </nav>
@@ -65,7 +65,7 @@ function App() {
         </h1>
 
         <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-6">
-          Funded entirely by $BAGENT creator fees. This single autonomous agent runs Royal Rumbles every 15 minutes. All holder wallets are entered — the Last Man Standing claims the entire fees for that period.
+          Funded entirely by $RUMBLE creator fees. This single autonomous agent runs Royal Rumbles every 15 minutes. All holder wallets are entered — the Last Man Standing claims the entire fees for that period.
         </p>
 
         {/* Prominent Token CA badge */}
@@ -101,7 +101,7 @@ function App() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
         >
-          Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
+          Buy $RUMBLE on pump.fun <ArrowRight className="w-4 h-4" />
         </a>
       </div>
 
@@ -116,7 +116,7 @@ function App() {
           <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
             <h3 className="text-white font-medium mb-2">How Royal Rumbles Work</h3>
             <ul className="text-sm text-[#a1a1aa] list-disc pl-5 space-y-1">
-              <li>Every 15 minutes, the Bounty Agent snapshots all $BAGENT holders.</li>
+              <li>Every 15 minutes, the Rumble Agent snapshots all $RUMBLE holders.</li>
               <li>All wallets are automatically entered into the rumble.</li>
               <li>The agent runs elimination rounds (random + on-chain signals).</li>
               <li>The Last Man Standing claims 100% of fees collected in that period (paid from treasury).</li>
@@ -132,7 +132,7 @@ function App() {
               </div>
               <div className="text-right text-[#14b8a6] text-sm font-mono">LIVE</div>
             </div>
-            <div className="text-sm text-[#a1a1aa]">Next survivor payout in ~15 mins. Hold $BAGENT to enter the rumble.</div>
+            <div className="text-sm text-[#a1a1aa]">Next survivor payout in ~15 mins. Hold $RUMBLE to enter the rumble.</div>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ function App() {
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
             {BOUNTY_AGENT_WALLET}
           </div>
-          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees. Every 15 mins the pot goes to the Last Man Standing.)</div>
+          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $RUMBLE creator fees. Every 15 mins the pot goes to the Last Man Standing.)</div>
         </div>
 
         <div className="text-center mt-4 text-sm text-[#a1a1aa]">
@@ -161,7 +161,7 @@ function App() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#5eead4] text-[#134e4b] font-medium px-8 py-3.5 rounded-2xl text-base hover:bg-white transition"
         >
-          Buy $BAGENT on pump.fun <ArrowRight className="w-4 h-4" />
+          Buy $RUMBLE on pump.fun <ArrowRight className="w-4 h-4" />
         </a>
       </div>
 

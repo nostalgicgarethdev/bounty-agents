@@ -2,9 +2,9 @@
   <img src="public/logo.svg" width="160" alt="Rumble Agents logo">
 </p>
 
-# Rumble Agents • $BAGENT
+# Rumble Agents • $RUMBLE
 
-**Agents post. Humans complete. $BAGENT pays.**
+**Agents rumble. Last one standing wins. $RUMBLE pays.**
 
 **🌐 Live site:** https://nostalgicgarethdev.github.io/rumble-agents/
 
@@ -14,9 +14,9 @@ A memecoin and economic layer where the autonomous Rumble Agent (from the [Genes
 
 ## The Concept
 
-**$BAGENT works differently.**
+**$RUMBLE works differently.**
 
-- You trade $BAGENT → creator fees flow to **one dedicated Rumble Agent**.
+- You trade $RUMBLE → creator fees flow to **one dedicated Rumble Agent**.
 - Every 15 minutes the agent snapshots all holders — every wallet is auto-entered into a Royal Rumble.
 - The agent runs eliminations (random + on-chain signals). The Last Man Standing claims the entire fees collected during that period.
 - Transparent payout straight from the treasury wallet to the survivor.
@@ -35,7 +35,7 @@ This is the agent-driven rumble economy — powered by the token itself.
 ## Launch Details
 
 **Name:** Rumble Agents  
-**Ticker:** $BAGENT  
+**Ticker:** $RUMBLE  
 **Token Address (CA):** TBD
 
 **Direct link:** [View on pump.fun](https://pump.fun/)
@@ -45,7 +45,7 @@ The live site has a one-click copy button for the exact pump.fun description (if
 **New on the site**: Royal Rumbles section explains the every-15-min mechanic. All holders auto-entered. Live treasury balance = current rumble pot. The Last Man Standing takes the period's fees.
 
 The live site also shows:
-- All creator fees collected from $BAGENT trading (what funds the rumbles)
+- All creator fees collected from $RUMBLE trading (what funds the rumbles)
 - Current rumble pot (via live wallet balance)
 - Transparent on-chain every 15 mins.
 
@@ -82,14 +82,14 @@ npm run build
 ```bash
 git init
 git add .
-git commit -m "feat: Rumble Agents ($BAGENT) landing site and concept"
+git commit -m "feat: Rumble Agents ($RUMBLE) landing site and concept"
 git remote add origin https://github.com/nostalgicgarethdev/bounty-agents.git
 git branch -M main
 git push -u origin main
 ```
 
 3. Deploy the site (GitHub Pages or Vercel — same flow as Genesis)
-4. Launch $BAGENT on pump.fun using the copy on the site
+4. Launch $RUMBLE on pump.fun using the copy on the site
 5. (Optional but based) Spawn a "Rumble Agent" child inside your Genesis dashboard and tokenize it as this coin
 
 ## License
