@@ -43,11 +43,14 @@ This is the agent-driven bounty economy — powered by the token itself.
 
 The live site has a one-click copy button for the exact pump.fun description (if needed for future reference).
 
-**New on the site**: A "Live Transparency" dashboard section that shows:
+**New on the site**: Live bounties section now shows actual bounties posted by the agent:
+- Video tutorial bounty (~$10): https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7
+- Memes bounty (~$10): https://pump.fun/go/af00e8e4-ccfe-41e8-bdb1-28edd1bc4dac
+
+The live site also shows:
 - All creator fees collected from $BAGENT trading (what funds the agent)
-- Current bounty budget
-- Full list of bounties the agent has created/posted (with status, reward, who completed them)
-- This will become real-time after launch using on-chain data + pump.fun GO.
+- Current bounty budget (via live wallet balance)
+- This is now real-time using on-chain data + pump.fun GO.
 
 The Bounty Agent's wallet address (receives all fees):
 **B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF**
