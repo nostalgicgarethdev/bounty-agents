@@ -44,7 +44,7 @@ function App() {
           </div>
 
           <a 
-            href="https://pump.fun/" 
+            href="https://pump.fun/BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#5eead4] text-[#134e4b] font-medium text-sm hover:bg-white transition-all"
@@ -74,7 +74,7 @@ function App() {
             <span className="text-[#71717a]">Token CA</span>
             <code 
               onClick={(e) => {
-                navigator.clipboard.writeText('TBD');
+                navigator.clipboard.writeText('BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump');
                 const el = e.currentTarget;
                 const orig = el.textContent;
                 el.textContent = 'Copied!';
@@ -82,10 +82,10 @@ function App() {
               }}
               className="font-mono text-[#14b8a6] cursor-pointer hover:underline select-all break-all"
             >
-              TBD
+              BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump
             </code>
             <a 
-              href="https://pump.fun/" 
+              href="https://pump.fun/BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#14b8a6] hover:text-white"

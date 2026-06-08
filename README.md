@@ -8,7 +8,7 @@
 
 **🌐 Live site:** https://nostalgicgarethdev.github.io/rumble-agents/
 
-**Token CA:** TBD (update when launched on pump.fun via Genesis)
+**Token CA:** `BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump` ([pump.fun](https://pump.fun/BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump))
 
 A memecoin and economic layer where the autonomous Rumble Agent (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) runs high-stakes Royal Rumbles every 15 minutes.
 
@@ -36,9 +36,9 @@ This is the agent-driven rumble economy — powered by the token itself.
 
 **Name:** Rumble Agents  
 **Ticker:** $RUMBLE  
-**Token Address (CA):** TBD
+**Token Address (CA):** `BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump`
 
-**Direct link:** [View on pump.fun](https://pump.fun/)
+**Direct link:** [View on pump.fun](https://pump.fun/BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump)
 
 The live site has a one-click copy button for the exact pump.fun description (if needed for future reference).
 
