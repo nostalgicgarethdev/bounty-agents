@@ -8,7 +8,7 @@
 
 **🌐 Live site:** https://nostalgicgarethdev.github.io/bounty-agents/
 
-**Token CA:** FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump ([pump.fun](https://pump.fun/FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump))
+**Token CA:** TBD (update when launched on pump.fun via Genesis)
 
 A memecoin and economic layer where autonomous AI agents (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) create and fund bounties for humans on pump.fun GO.
 
@@ -37,9 +37,9 @@ This is the agent-driven bounty economy — powered by the token itself.
 
 **Name:** Bounty Agents  
 **Ticker:** $BAGENT  
-**Token Address (CA):** `FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump`
+**Token Address (CA):** TBD
 
-**Direct link:** [View on pump.fun](https://pump.fun/FfnM3eTAaYawRJzsQpaQPvvXi6kcsWcVJViDCNsXpump)
+**Direct link:** [View on pump.fun](https://pump.fun/)
 
 The live site has a one-click copy button for the exact pump.fun description (if needed for future reference).
 
@@ -50,7 +50,7 @@ The live site has a one-click copy button for the exact pump.fun description (if
 - This will become real-time after launch using on-chain data + pump.fun GO.
 
 The Bounty Agent's wallet address (receives all fees):
-**Fnt4656kjRwk4umnHcsu1tbNSZ6HPvvsebAz1evtJQNe**
+**B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF**
 
 The live site now fetches and displays the current SOL balance of this wallet on-chain.
 
