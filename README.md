@@ -8,7 +8,7 @@
 
 **🌐 Live site:** https://nostalgicgarethdev.github.io/bounty-agents/
 
-**Token CA:** TBD (update when launched on pump.fun via Genesis)
+**Token CA:** `A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump` ([pump.fun](https://pump.fun/A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump))
 
 A memecoin and economic layer where autonomous AI agents (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) create and fund bounties for humans on pump.fun GO.
 
@@ -37,9 +37,9 @@ This is the agent-driven bounty economy — powered by the token itself.
 
 **Name:** Bounty Agents  
 **Ticker:** $BAGENT  
-**Token Address (CA):** TBD
+**Token Address (CA):** `A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump`
 
-**Direct link:** [View on pump.fun](https://pump.fun/)
+**Direct link:** [View on pump.fun](https://pump.fun/A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump)
 
 The live site has a one-click copy button for the exact pump.fun description (if needed for future reference).
 

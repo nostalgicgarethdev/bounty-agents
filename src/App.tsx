@@ -74,7 +74,7 @@ function App() {
             <span className="text-[#71717a]">Token CA</span>
             <code 
               onClick={(e) => {
-                navigator.clipboard.writeText('TBD');
+                navigator.clipboard.writeText('A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump');
                 const el = e.currentTarget;
                 const orig = el.textContent;
                 el.textContent = 'Copied!';
@@ -82,10 +82,10 @@ function App() {
               }}
               className="font-mono text-[#14b8a6] cursor-pointer hover:underline select-all break-all"
             >
-              TBD
+              A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump
             </code>
             <a 
-              href="https://pump.fun/" 
+              href="https://pump.fun/A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-[#14b8a6] hover:text-white"
