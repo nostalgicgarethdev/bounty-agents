@@ -41,6 +41,66 @@ function App() {
     return () => clearInterval(interval)
   }, [])
 
+  // Royal Rumble simulator with real/pasted holders
+  const [rumbleHolders, setRumbleHolders] = useState([
+    // Demo holders (replace by pasting real from Solscan)
+    'Demo1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo4xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo6xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo8xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo10xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo12xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo13xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo14xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'Demo15xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  ])
+  const [remainingHolders, setRemainingHolders] = useState([])
+  const [rumbleLog, setRumbleLog] = useState([])
+  const [rumbleWinner, setRumbleWinner] = useState(null)
+  const [isRumbling, setIsRumbling] = useState(false)
+  const [holderPaste, setHolderPaste] = useState('')
+
+  const loadRealHolders = () => {
+    const lines = holderPaste.split('\n').map(l => l.trim()).filter(l => l.length > 30) // rough filter for pubkeys
+    if (lines.length >= 2) {
+      setRumbleHolders(lines)
+      setRemainingHolders([])
+      setRumbleLog([])
+      setRumbleWinner(null)
+      alert(`Loaded ${lines.length} holders from paste.`)
+    } else {
+      alert('Paste at least 2 valid wallet addresses (one per line) from Solscan holders tab.')
+    }
+  }
+
+  const runRoyalRumble = async () => {
+    if (rumbleHolders.length < 2 || isRumbling) return
+    setIsRumbling(true)
+    let current = [...rumbleHolders]
+    const log = []
+    setRemainingHolders(current)
+    setRumbleLog([])
+    setRumbleWinner(null)
+
+    while (current.length > 1) {
+      await new Promise(r => setTimeout(r, 180)) // fast animation
+      const idx = Math.floor(Math.random() * current.length)
+      const eliminated = current.splice(idx, 1)[0]
+      log.push(`Eliminated: ${eliminated.slice(0,6)}...${eliminated.slice(-4)} (${current.length} left)`)
+      setRemainingHolders([...current])
+      setRumbleLog([...log])
+    }
+    const winner = current[0]
+    setRumbleWinner(winner)
+    setIsRumbling(false)
+  }
+
   return (
     <div className="min-h-screen bg-[#09090b] text-[#a1a1aa]">
       {/* Navbar */}
@@ -188,6 +248,60 @@ function App() {
                 <div className="text-[10px] text-[#14b8a6] mt-1">Send the current treasury balance (pot above) from the agent wallet to this address.</div>
               </div>
             </div>
+          </div>
+
+          {/* Interactive Royal Rumble with real holders */}
+          <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
+            <h3 className="text-white font-medium mb-2">Run Royal Rumble (Real Holders)</h3>
+            <div className="text-xs text-[#71717a] mb-2">Paste addresses from Solscan holders tab (one per line), load, then run the rumble. Last survivor wins the pot.</div>
+            
+            <textarea
+              value={holderPaste}
+              onChange={(e) => setHolderPaste(e.target.value)}
+              placeholder="Paste real holder wallets here, one per line&#10;From: https://solscan.io/token/BhWkShZbLiauNNfMb8afree5rp3aqSHYvFdFRRKQpump#holders"
+              className="w-full h-20 text-xs font-mono bg-[#111113] border border-[#27272a] rounded p-2 mb-2"
+            />
+            <div className="flex gap-2 mb-3">
+              <button onClick={loadRealHolders} className="px-3 py-1 text-sm bg-[#14b8a6] text-[#09090b] rounded hover:bg-white">Load Holders</button>
+              <button 
+                onClick={runRoyalRumble} 
+                disabled={isRumbling || rumbleHolders.length < 2}
+                className="px-3 py-1 text-sm bg-[#5eead4] text-[#134e4b] rounded hover:bg-white disabled:opacity-50"
+              >
+                {isRumbling ? 'Rumbling...' : `Start Rumble (${rumbleHolders.length} holders)`}
+              </button>
+            </div>
+
+            <div className="text-sm mb-1">Holders loaded: <span className="font-mono">{rumbleHolders.length}</span></div>
+
+            {rumbleLog.length > 0 && (
+              <div className="mb-2">
+                <div className="text-xs text-[#71717a] mb-1">Elimination Log:</div>
+                <div className="text-[10px] font-mono bg-[#111113] p-2 rounded max-h-28 overflow-auto border border-[#27272a]">
+                  {rumbleLog.map((line, i) => <div key={i}>{line}</div>)}
+                </div>
+              </div>
+            )}
+
+            {rumbleWinner && (
+              <div className="p-3 bg-[#111113] rounded border border-[#14b8a6]">
+                <div className="text-xs text-[#71717a] mb-1">WINNING WALLET (Last Man Standing)</div>
+                <div className="font-mono text-sm text-white break-all mb-1">{rumbleWinner}</div>
+                <button 
+                  onClick={() => {
+                    navigator.clipboard.writeText(rumbleWinner);
+                    // simple feedback
+                    const origText = event.currentTarget.innerText;
+                    event.currentTarget.innerText = 'Copied!';
+                    setTimeout(() => { if (event.currentTarget) event.currentTarget.innerText = origText; }, 1200);
+                  }}
+                  className="text-xs px-2 py-0.5 bg-[#14b8a6] text-[#09090b] rounded hover:bg-white"
+                >
+                  Copy Wallet Address
+                </button>
+                <div className="text-[10px] text-[#14b8a6] mt-2">Send the current treasury balance (see pot above) from your agent wallet to this address.</div>
+              </div>
+            )}
           </div>
         </div>
       </div>
