@@ -60,9 +60,8 @@ function App() {
     'Demo14xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     'Demo15xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   ])
-  const [remainingHolders, setRemainingHolders] = useState([])
-  const [rumbleLog, setRumbleLog] = useState([])
-  const [rumbleWinner, setRumbleWinner] = useState(null)
+  const [rumbleLog, setRumbleLog] = useState<string[]>([])
+  const [rumbleWinner, setRumbleWinner] = useState<string | null>(null)
   const [isRumbling, setIsRumbling] = useState(false)
   const [holderPaste, setHolderPaste] = useState('')
 
@@ -70,7 +69,6 @@ function App() {
     const lines = holderPaste.split('\n').map(l => l.trim()).filter(l => l.length > 30) // rough filter for pubkeys
     if (lines.length >= 2) {
       setRumbleHolders(lines)
-      setRemainingHolders([])
       setRumbleLog([])
       setRumbleWinner(null)
       alert(`Loaded ${lines.length} holders from paste.`)
@@ -84,7 +82,6 @@ function App() {
     setIsRumbling(true)
     let current = [...rumbleHolders]
     const log = []
-    setRemainingHolders(current)
     setRumbleLog([])
     setRumbleWinner(null)
 
@@ -93,7 +90,6 @@ function App() {
       const idx = Math.floor(Math.random() * current.length)
       const eliminated = current.splice(idx, 1)[0]
       log.push(`Eliminated: ${eliminated.slice(0,6)}...${eliminated.slice(-4)} (${current.length} left)`)
-      setRemainingHolders([...current])
       setRumbleLog([...log])
     }
     const winner = current[0]
@@ -288,12 +284,12 @@ function App() {
                 <div className="text-xs text-[#71717a] mb-1">WINNING WALLET (Last Man Standing)</div>
                 <div className="font-mono text-sm text-white break-all mb-1">{rumbleWinner}</div>
                 <button 
-                  onClick={() => {
+                  onClick={(e) => {
                     navigator.clipboard.writeText(rumbleWinner);
-                    // simple feedback
-                    const origText = event.currentTarget.innerText;
-                    event.currentTarget.innerText = 'Copied!';
-                    setTimeout(() => { if (event.currentTarget) event.currentTarget.innerText = origText; }, 1200);
+                    const btn = e.currentTarget as HTMLButtonElement;
+                    const origText = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    setTimeout(() => { if (btn) btn.innerText = origText; }, 1200);
                   }}
                   className="text-xs px-2 py-0.5 bg-[#14b8a6] text-[#09090b] rounded hover:bg-white"
                 >
