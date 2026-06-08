@@ -8,6 +8,8 @@ function App() {
   const [balance, setBalance] = useState<string | null>(null)
   const [loadingBalance, setLoadingBalance] = useState(true)
 
+  const [secondsLeft, setSecondsLeft] = useState(900)
+
   useEffect(() => {
     const fetchBalance = async () => {
       try {
@@ -23,6 +25,20 @@ function App() {
       setLoadingBalance(false)
     }
     fetchBalance()
+  }, [])
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date()
+      const min = now.getMinutes() % 15
+      const sec = now.getSeconds()
+      let remaining = (15 - min) * 60 - sec
+      if (remaining <= 0) remaining += 15 * 60
+      setSecondsLeft(remaining)
+    }
+    calculateTimeLeft()
+    const interval = setInterval(calculateTimeLeft, 1000)
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -132,7 +148,14 @@ function App() {
               </div>
               <div className="text-right text-[#14b8a6] text-sm font-mono">LIVE</div>
             </div>
-            <div className="text-sm text-[#a1a1aa]">Next survivor payout in ~15 mins. Hold $RUMBLE to enter the rumble.</div>
+            <div className="text-sm text-[#a1a1aa] mb-3">Next survivor payout in ~15 mins. Hold $RUMBLE to enter the rumble.</div>
+
+            <div className="text-center border-t border-[#27272a] pt-3">
+              <div className="text-xs text-[#71717a] tracking-[2px] mb-1">NEXT RUMBLE IN</div>
+              <div className="font-mono text-3xl text-white tracking-[3px]">
+                {String(Math.floor(secondsLeft / 60)).padStart(2, '0')}:{String(secondsLeft % 60).padStart(2, '0')}
+              </div>
+            </div>
           </div>
         </div>
       </div>
