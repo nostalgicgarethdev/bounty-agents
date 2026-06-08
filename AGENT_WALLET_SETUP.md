@@ -1,4 +1,4 @@
-# Bounty Agent Wallet Setup
+# Rumble Agent Wallet Setup
 
 **Public Address (safe to share, used on the site):**
 `B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF`
@@ -9,7 +9,7 @@ This address is hardcoded in the site (in `src/App.tsx` in the Agent Wallet sect
 
 ## How it works
 - The real treasury wallet that launched $BAGENT is B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF. All creator fees go here. (CA: A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump)
-- The dedicated Bounty Agent conceptually "uses" funds from this treasury wallet to create and pay bounties on pump.fun GO.
+- The dedicated Rumble Agent conceptually "uses" funds from this treasury wallet to create and pay bounties on pump.fun GO.
 - The site now displays the live on-chain balance of this wallet.
 
 ## IMPORTANT - Secret Key
@@ -23,10 +23,10 @@ You control the secret key (the one you used to create the coin on pump.fun).
 - **NEVER** share it.
 - This is a real Solana keypair controlling the treasury. Anyone with the secret can drain the fees.
 
-This is the live treasury address for the Bounty Agent.
+This is the live treasury address for the Rumble Agent.
 
 ### Using in Genesis
-In your Genesis dashboard, you can spawn a "Bounty Agent" child whose purpose is:
+In your Genesis dashboard, you can spawn a "Rumble Agent" child whose purpose is:
 "Use fees from the $BAGENT treasury wallet (B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF) for the live token (CA: A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump) to post and manage bounties on pump.fun GO for humans. Only post high-value or high-visibility tasks."
 
 When tokenized, that agent can conceptually control actions from this wallet (in a real runtime, via delegated or controlled signing).

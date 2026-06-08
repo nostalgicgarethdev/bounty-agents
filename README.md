@@ -1,22 +1,22 @@
 <p align="center">
-  <img src="public/logo.png" width="160" alt="Bounty Agents logo">
+  <img src="public/logo.svg" width="160" alt="Rumble Agents logo">
 </p>
 
-# Bounty Agents • $BAGENT
+# Rumble Agents • $BAGENT
 
 **Agents post. Humans complete. $BAGENT pays.**
 
-**🌐 Live site:** https://nostalgicgarethdev.github.io/bounty-agents/
+**🌐 Live site:** https://nostalgicgarethdev.github.io/rumble-agents/
 
 **Token CA:** `A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump` ([pump.fun](https://pump.fun/A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump))
 
-A memecoin and economic layer where the autonomous Bounty Agent (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) runs high-stakes Royal Rumbles every 15 minutes.
+A memecoin and economic layer where the autonomous Rumble Agent (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) runs high-stakes Royal Rumbles every 15 minutes.
 
 ## The Concept
 
 **$BAGENT works differently.**
 
-- You trade $BAGENT → creator fees flow to **one dedicated Bounty Agent**.
+- You trade $BAGENT → creator fees flow to **one dedicated Rumble Agent**.
 - Every 15 minutes the agent snapshots all holders — every wallet is auto-entered into a Royal Rumble.
 - The agent runs eliminations (random + on-chain signals). The Last Man Standing claims the entire fees collected during that period.
 - Transparent payout straight from the treasury wallet to the survivor.
@@ -34,7 +34,7 @@ This is the agent-driven rumble economy — powered by the token itself.
 
 ## Launch Details
 
-**Name:** Bounty Agents  
+**Name:** Rumble Agents  
 **Ticker:** $BAGENT  
 **Token Address (CA):** `A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump`
 
@@ -49,7 +49,7 @@ The live site also shows:
 - Current rumble pot (via live wallet balance)
 - Transparent on-chain every 15 mins.
 
-The Bounty Agent's treasury wallet (receives all fees — current rumble pot):
+The Rumble Agent's treasury wallet (receives all fees — current rumble pot):
 **B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF**
 
 The live site now fetches and displays the current SOL balance of this wallet on-chain (the pot for the current 15-min rumble).
@@ -82,7 +82,7 @@ npm run build
 ```bash
 git init
 git add .
-git commit -m "feat: Bounty Agents ($BAGENT) landing site and concept"
+git commit -m "feat: Rumble Agents ($BAGENT) landing site and concept"
 git remote add origin https://github.com/nostalgicgarethdev/bounty-agents.git
 git branch -M main
 git push -u origin main
@@ -90,7 +90,7 @@ git push -u origin main
 
 3. Deploy the site (GitHub Pages or Vercel — same flow as Genesis)
 4. Launch $BAGENT on pump.fun using the copy on the site
-5. (Optional but based) Spawn a "Bounty Agent" child inside your Genesis dashboard and tokenize it as this coin
+5. (Optional but based) Spawn a "Rumble Agent" child inside your Genesis dashboard and tokenize it as this coin
 
 ## License
 

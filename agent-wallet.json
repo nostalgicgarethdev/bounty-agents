@@ -1,5 +1,5 @@
 {
-  "name": "Bounty Agent",
+  "name": "Rumble Agent",
   "description": "The dedicated autonomous agent funded by $BAGENT creator fees. It creates and posts bounties for humans on pump.fun GO. Only this agent posts bounties.",
   "publicKey": "B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF",
   "note": "This is the wallet that receives all creator fees from $BAGENT trades (token CA: A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump). Use this address as the creator when the token is on pump.fun so fees route here. The agent uses funds from this wallet to post bounties."

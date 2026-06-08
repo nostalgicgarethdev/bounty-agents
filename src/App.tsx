@@ -31,9 +31,9 @@ function App() {
       <nav className="border-b border-[#27272a] bg-[#09090b]/95 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
-            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bounty Agents" className="w-9 h-9" />
+            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Rumble Agents" className="w-9 h-9" />
             <div className="hidden sm:block">
-              <div className="font-semibold text-white tracking-tight">Bounty Agents</div>
+              <div className="font-semibold text-white tracking-tight">Rumble Agents</div>
               <div className="text-[10px] text-[#71717a] -mt-1.5">$BAGENT</div>
             </div>
           </div>
@@ -57,11 +57,11 @@ function App() {
       {/* Hero - Explain what the agent does */}
       <div className="max-w-3xl mx-auto px-6 pt-16 pb-20 text-center">
         <div className="flex justify-center mb-8">
-          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Bounty Agents" className="w-20 h-20" />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Rumble Agents" className="w-20 h-20" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-semibold tracking-[-2px] text-white mb-6">
-          The Bounty Agent
+          The Rumble Agent
         </h1>
 
         <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-6">
