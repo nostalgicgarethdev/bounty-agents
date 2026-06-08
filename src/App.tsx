@@ -65,7 +65,7 @@ function App() {
         </h1>
 
         <p className="text-xl text-[#a1a1aa] max-w-md mx-auto mb-6">
-          Funded entirely by $BAGENT creator fees. This single autonomous agent creates and posts real bounties for humans on pump.fun GO.
+          Funded entirely by $BAGENT creator fees. This single autonomous agent runs Royal Rumbles every 15 minutes. All holder wallets are entered — the Last Man Standing claims the entire fees for that period.
         </p>
 
         {/* Prominent Token CA badge */}
@@ -105,62 +105,34 @@ function App() {
         </a>
       </div>
 
-      {/* Bounties created by the agent */}
+      {/* Royal Rumbles hosted by the agent */}
       <div id="bounties" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#27272a]">
         <div className="text-center mb-8">
-          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">BOUNTIES</div>
-          <h2 className="text-white text-3xl tracking-tight">Created by the Agent</h2>
+          <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">ROYAL RUMBLES</div>
+          <h2 className="text-white text-3xl tracking-tight">Hosted by the Agent</h2>
         </div>
 
         <div className="space-y-4">
-          {/* Bounty 1 */}
           <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
-            <div className="flex justify-between items-start mb-3">
-              <div>
-                <div className="text-white font-medium">Make a 45-60s vertical video tutorial for pump.fun GO bounties</div>
-                <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
-              </div>
-              <div className="text-right">
-                <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
-                <div className="text-[10px] text-[#71717a]">Reward</div>
-              </div>
-            </div>
-            <div className="text-sm text-[#a1a1aa] mb-4">
-              Create a short, clear video showing how to find, claim, and complete a bounty on pump.fun GO. Post on X or TikTok with the CA.
-            </div>
-            <a 
-              href="https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
-            >
-              View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
-            </a>
+            <h3 className="text-white font-medium mb-2">How Royal Rumbles Work</h3>
+            <ul className="text-sm text-[#a1a1aa] list-disc pl-5 space-y-1">
+              <li>Every 15 minutes, the Bounty Agent snapshots all $BAGENT holders.</li>
+              <li>All wallets are automatically entered into the rumble.</li>
+              <li>The agent runs elimination rounds (random + on-chain signals).</li>
+              <li>The Last Man Standing claims 100% of fees collected in that period (paid from treasury).</li>
+            </ul>
+            <div className="mt-3 text-xs text-[#71717a]">Rumbles reset every 15 mins. Transparent results posted on-chain / X.</div>
           </div>
 
-          {/* Bounty 2 */}
           <div className="border border-[#27272a] rounded-2xl bg-[#0a0a0c] p-6">
-            <div className="flex justify-between items-start mb-3">
+            <div className="flex justify-between items-start mb-2">
               <div>
-                <div className="text-white font-medium">Create 3 original memes featuring the Bounty Agent</div>
-                <div className="text-xs text-[#71717a] mt-1">Posted by the Bounty Agent using treasury wallet</div>
+                <div className="text-white font-medium">Current Royal Rumble</div>
+                <div className="text-xs text-[#71717a]">All holders auto-entered. Pot = current treasury balance (below).</div>
               </div>
-              <div className="text-right">
-                <div className="text-[#14b8a6] font-mono text-sm">~$10 SOL</div>
-                <div className="text-[10px] text-[#71717a]">Reward</div>
-              </div>
+              <div className="text-right text-[#14b8a6] text-sm font-mono">LIVE</div>
             </div>
-            <div className="text-sm text-[#a1a1aa] mb-4">
-              Design and post 3 funny or creative memes about the Bounty Agent on X. Include the CA and wallet in the post. 
-            </div>
-            <a 
-              href="https://pump.fun/go/af00e8e4-ccfe-41e8-bdb1-28edd1bc4dac" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[#14b8a6] text-sm hover:underline"
-            >
-              View on pump.fun GO <ExternalLink className="w-3.5 h-3.5 ml-1" />
-            </a>
+            <div className="text-sm text-[#a1a1aa]">Next survivor payout in ~15 mins. Hold $BAGENT to enter the rumble.</div>
           </div>
         </div>
       </div>
@@ -169,11 +141,11 @@ function App() {
       <div id="wallet" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#27272a]">
         <div className="text-center mb-8">
           <div className="text-[#14b8a6] text-xs tracking-[3px] mb-2">AGENT WALLET</div>
-          <h2 className="text-white text-3xl tracking-tight">Fees in the Treasury</h2>
+          <h2 className="text-white text-3xl tracking-tight">Current Rumble Pot</h2>
           <div className="mt-2 font-mono text-xs text-[#a1a1aa] break-all">
             {BOUNTY_AGENT_WALLET}
           </div>
-          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees)</div>
+          <div className="text-[10px] text-[#71717a] mt-1">(This address receives 100% of $BAGENT creator fees. Every 15 mins the pot goes to the Last Man Standing.)</div>
         </div>
 
         <div className="text-center mt-4 text-sm text-[#a1a1aa]">

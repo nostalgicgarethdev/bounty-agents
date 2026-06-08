@@ -10,21 +10,20 @@
 
 **Token CA:** `A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump` ([pump.fun](https://pump.fun/A4UYHRcud11phXSk3u1s8AF2MbWaePP4FBgKrwixpump))
 
-A memecoin and economic layer where autonomous AI agents (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) create and fund bounties for humans on pump.fun GO.
+A memecoin and economic layer where the autonomous Bounty Agent (from the [Genesis](https://github.com/nostalgicgarethdev/genesis) agent launchpad) runs high-stakes Royal Rumbles every 15 minutes.
 
 ## The Concept
-
-While the rest of the world is using pump.fun's new GO bounty platform to let anyone post random bounties for any task...
 
 **$BAGENT works differently.**
 
 - You trade $BAGENT → creator fees flow to **one dedicated Bounty Agent**.
-- That single agent (a real child agent from the Genesis launchpad) uses the coin's own revenue to post and fund bounties.
-- Humans complete the agent's tasks and get paid.
+- Every 15 minutes the agent snapshots all holders — every wallet is auto-entered into a Royal Rumble.
+- The agent runs eliminations (random + on-chain signals). The Last Man Standing claims the entire fees collected during that period.
+- Transparent payout straight from the treasury wallet to the survivor.
 
-Not open to everyone. Not random degens posting forehead tattoos. Just one agent, funded by the success of the coin, systematically creating work for humans.
+Holding isn't passive anymore — it's a gamified survival game where loyalty is rewarded dramatically every 15 mins.
 
-This is the agent-driven bounty economy — powered by the token itself.
+This is the agent-driven rumble economy — powered by the token itself.
 
 ## Why This Works Right Now
 
@@ -43,19 +42,17 @@ This is the agent-driven bounty economy — powered by the token itself.
 
 The live site has a one-click copy button for the exact pump.fun description (if needed for future reference).
 
-**New on the site**: Live bounties section now shows actual bounties posted by the agent:
-- Video tutorial bounty (~$10): https://pump.fun/go/0b80279b-5692-419e-8df9-6b57373055f7
-- Memes bounty (~$10): https://pump.fun/go/af00e8e4-ccfe-41e8-bdb1-28edd1bc4dac
+**New on the site**: Royal Rumbles section explains the every-15-min mechanic. All holders auto-entered. Live treasury balance = current rumble pot. The Last Man Standing takes the period's fees.
 
 The live site also shows:
-- All creator fees collected from $BAGENT trading (what funds the agent)
-- Current bounty budget (via live wallet balance)
-- This is now real-time using on-chain data + pump.fun GO.
+- All creator fees collected from $BAGENT trading (what funds the rumbles)
+- Current rumble pot (via live wallet balance)
+- Transparent on-chain every 15 mins.
 
-The Bounty Agent's wallet address (receives all fees):
+The Bounty Agent's treasury wallet (receives all fees — current rumble pot):
 **B14PLbCtnT3dtePn65XnFeeLAYttrYyroHX6mGLDmFuF**
 
-The live site now fetches and displays the current SOL balance of this wallet on-chain.
+The live site now fetches and displays the current SOL balance of this wallet on-chain (the pot for the current 15-min rumble).
 
 **WARNING (for repo owner):** A real keypair was generated for demo purposes. The secret key was printed in the terminal during generation — copy it now and store it securely offline (e.g. in a password manager or hardware wallet). Never commit the secret key. The public address is safe and is used on the site.
 
